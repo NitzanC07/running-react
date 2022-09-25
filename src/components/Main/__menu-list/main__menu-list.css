@@ -1,0 +1,7 @@
+.main__menu-list {
+    list-style: none;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,27 @@
+.main__content{
+    /* width: 100%; */
+    margin: 0;
+    padding: 15px;
+    visibility: visible;
+    background-color: rgba(255, 240, 240, 0.9);
+    color: rgba(150, 0, 0, 1);
+    border-radius: 10px;
+    overflow-y: scroll;
+    position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+}
+
+/* CSS-Tricks: https://css-tricks.com/almanac/properties/s/scrollbar/  */
+.main__content::-webkit-scrollbar{
+    width: 0.5em;
+}
+.main__content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+.main__content::-webkit-scrollbar-thumb {
+    background-color: #ffa;
+    outline: 0px solid slategrey;
+}

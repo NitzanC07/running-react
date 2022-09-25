@@ -1,0 +1,10 @@
+.app {
+  width: 100%;
+  min-width: 300px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(100, 0, 0, 1);
+  color: rgba(255, 230, 230, 1);
+  direction: rtl;
+}
