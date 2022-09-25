@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Calculators from "../Calculators/Calculators";
-import MainMenu from "../Main-menu/MainMenu";
+import MainMenu from "../MainMenu/MainMenu";
 
 function Main(props) {
     return (
@@ -9,6 +9,7 @@ function Main(props) {
         <Routes>
 
           <Route 
+            exact
             path="/" 
             element={<MainMenu />}
           />
