@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Calculators from "../Calculators/Calculators";
 import MainMenu from "../MainMenu/MainMenu";
+import HrTargetsCalculate from '../Calculators/HrTargetsCalculate/HrTargetsCalculate';
 
 function Main(props) {
     return (
@@ -9,14 +10,18 @@ function Main(props) {
         <Routes>
 
           <Route 
-            exact
-            path="/" 
-            element={<MainMenu />}
+            path="/calculators" 
+            element={<Calculators id="calculators" />}
           />
 
           <Route 
-            path="/calculators" 
-            element={<Calculators />}
+            path='/calculators/hrTargetsCalculate'
+            element={<HrTargetsCalculate />}
+          />
+
+          <Route 
+            path="/" 
+            element={<MainMenu id="main-menu" />}
           />
 
         </Routes>
