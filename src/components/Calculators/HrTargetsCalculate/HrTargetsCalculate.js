@@ -1,53 +1,100 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function HrTargetsCalculate(props) {
 
-    return(
-        <div className="calculators" id="hrtargetsTest">
-        
-        <div className="BackToMenu_div">
-            <Link to="/calculators">
-                <button className="BackToMenu_Button">חזרה</button>
-            </Link>
-        </div>
+  const [age, setAge] = useState(0);
+  const [gender, setGender] = useState("male");
+  const [hrRest, setHrRest] = useState(0);
+  const [hrMax, setHrMax] = useState(0);
+  const [hrTarget, setHrTarget] = useState(0);
+  const [nextHrTarget, setNextHrTarget] = useState(0);
+  const percentages = [0.70, 0.8, 0.85, 0.90, 0.95, 1];
+  const verbals = ["אימון שחרור / התאוששות", "אימון אירובי קל", "אימון אירובי טמפו", "אימון אנאירובי", "אימון אנאירובי עצים"];
 
-        <h1>חישוב דופק מטרה</h1> 
-        <table>
-          <tr id="gender_hrTargets">
-            <th>מין:</th>
-            <td>
-                <input className="inputGen" type="radio" id="gen3" name="gender_hrTargets" value="male" checked />
-                <label for="gen3">זכר</label>
-            </td>
-            <td>
-                <input className="inputGen" type="radio" id="gen4" name="gender_hrTargets" value="female" />
-                <label for="gen4">נקבה</label></td>
-          </tr>
-          <tr>
-            <th><label>גיל (בשנים):</label></th>
-            <td colspan="2">
-                <input type="number" id="hrTargetsAGE" placeholder="0" />
-            </td>
-          </tr>
-          <tr>
-            <th><label>דופק מנוחה (15 שניות):</label></th>
-                <td colspan="2">
-                    <input type="number" id="hrTargetsREST" placeholder="0" />
-                </td>
-          </tr>
-          <tr>
-            <th></th>
-                <td colspan="2">
-                    <button onclick="cal_HR_target();">חשב</button>
-                </td>
-          </tr>
-          <tr>
-            <th>תוצאה:</th>
-            <td colspan="2"><div className="result" id="hrTargetsRESULT">תוצאה:</div></td>
-          </tr>
-        </table>
+  function round_number(value, decimals){
+    var shifter = Math.pow(10,decimals);
+    return Math.round(value * shifter) / shifter;
+  }
+
+  function hrTargets(evt){
+    evt.preventDefault();
+    if (age === 0 || hrRest === 0) {
+      return console.log("Something is missing");
+    } else {
+      if (gender === "female") {
+        setHrMax(226 - age)
+      }
+      else if (gender === "male") {
+        setHrMax(220 - age)
+      }
+    }
+
+    console.log(`Max HR: ${hrMax}`);
+  }
+
+  return(
+    <div className="main__content calculators" id="hrtargetsTest">
+    
+      <div className="BackToMenu_div">
+          <Link to="/calculators">
+              <button className="BackToMenu_Button">חזרה</button>
+          </Link>
       </div>
-    )
+
+      <h2 className='calculator__title'>חישוב דופק מטרה</h2> 
+      <form className='calculator__form' onSubmit={hrTargets}>
+        <fieldset className='calculator__form__data'>
+          <label>מין:</label>
+            <select 
+              className='calculator__form__input' 
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+            >
+              <option className="calculator__form__input-option" type="radio" id="gender-male" name="gender_hrTargets" value="male">זכר</option>
+              <option className="calculator__form__input-option" type="radio" id="gender-female" name="gender_hrTargets" value="female">נקבה</option>
+            </select>
+        </fieldset>
+        
+        <fieldset className='calculator__form__data'>
+          <label>גיל (בשנים):</label>
+            <input 
+              className='calculator__form__input' 
+              type="number" 
+              id="hrTargetsAge" 
+              placeholder="0" 
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+            />
+        </fieldset>
+        
+        <fieldset className='calculator__form__data'>
+          <label>דופק במנוחה (15 שניות):</label>
+            <input
+              className='calculator__form__input' 
+              type="number" 
+              id="hrTargetsRest" 
+              placeholder="0" 
+              value={hrRest}
+              onChange={(e) => setHrRest(e.target.value)}
+            />
+        </fieldset>
+
+        <button className='calculator__form__submit-button' type='submit'>חשב</button>
+
+        <fieldset  className="calculator__form__result">
+          <p>דופק מירבי: {hrMax}</p>
+          <p>דופק במנוחה (בדקה): {hrRest * 4}</p>
+          {
+            percentages.forEach((zone, i) => (
+              <p>{verbals[i]}: {hrMax * zone}</p>
+            ))
+          }
+        </fieldset>
+        
+      </form>
+    </div>
+  )
 }
 
 export default HrTargetsCalculate;
