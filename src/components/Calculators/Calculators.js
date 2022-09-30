@@ -23,7 +23,7 @@ function Calculators(props) {
                     </Link>
                 </li>
                 <li className="main__menu-item">
-                    <Link to={`/${props.id}/vo2maxHrCalculate`}>
+                    <Link to={`/${props.id}/vo2maxByHrCalculate`}>
                         <button type="button" className="main__menu-button main__menu-button_type_vo2maxHrCalculate" id="vo2maxHrCalculate">חישוב צח"מ (לפי דופק)</button>
                     </Link>
                 </li>

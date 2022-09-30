@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function HrTargetsCalculate(props) {
@@ -7,30 +7,32 @@ function HrTargetsCalculate(props) {
   const [gender, setGender] = useState("male");
   const [hrRest, setHrRest] = useState(0);
   const [hrMax, setHrMax] = useState(0);
-  const [hrTarget, setHrTarget] = useState(0);
-  const [nextHrTarget, setNextHrTarget] = useState(0);
-  const percentages = [0.70, 0.8, 0.85, 0.90, 0.95, 1];
+  const percentages = [0.70, 0.8, 0.85, 0.90, 0.95];
   const verbals = ["אימון שחרור / התאוששות", "אימון אירובי קל", "אימון אירובי טמפו", "אימון אנאירובי", "אימון אנאירובי עצים"];
+  const [showData, setShowData] = useState(false);
 
   function round_number(value, decimals){
-    var shifter = Math.pow(10,decimals);
+    var shifter = Math.pow(10, decimals);
     return Math.round(value * shifter) / shifter;
   }
 
-  function hrTargets(evt){
-    evt.preventDefault();
-    if (age === 0 || hrRest === 0) {
-      return console.log("Something is missing");
-    } else {
-      if (gender === "female") {
-        setHrMax(226 - age)
-      }
-      else if (gender === "male") {
-        setHrMax(220 - age)
-      }
+  useEffect(() => {
+    if (gender === "female") {
+      setHrMax(226 - age)
     }
+    else if (gender === "male") {
+      setHrMax(220 - age)
+    }
+  }, [age, gender])
 
-    console.log(`Max HR: ${hrMax}`);
+  function hrTargets(evt) {
+    evt.preventDefault();
+    if (age > 0 && hrRest > 0) {
+      setShowData(true);    
+    } else {
+      setShowData(false);
+      alert("חסרים נתונים של גיל ודופק במנוחה.")
+    }
   }
 
   return(
@@ -82,16 +84,20 @@ function HrTargetsCalculate(props) {
 
         <button className='calculator__form__submit-button' type='submit'>חשב</button>
 
-        <fieldset  className="calculator__form__result">
-          <p>דופק מירבי: {hrMax}</p>
-          <p>דופק במנוחה (בדקה): {hrRest * 4}</p>
-          {
-            percentages.forEach((zone, i) => (
-              <p>{verbals[i]}: {hrMax * zone}</p>
-            ))
-          }
-        </fieldset>
-        
+        {
+          showData ?
+          <fieldset  className="calculator__form__result">
+            <p>דופק מירבי: {hrMax}</p>
+            <p>דופק במנוחה (בדקה): {hrRest * 4}</p>
+            {
+              percentages.map((zone, i) => (
+                <p key={i}>{verbals[i]}: {round_number(((hrMax - hrRest*4) * zone + hrRest*4), 0)} פעימות לדקה.</p>
+              ))
+            }
+          </fieldset>
+          :
+          ""
+        }
       </form>
     </div>
   )
