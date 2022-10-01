@@ -31,7 +31,6 @@ function HrTargetsCalculate(props) {
       setShowData(true);    
     } else {
       setShowData(false);
-      alert("חסרים נתונים של גיל ודופק במנוחה.")
     }
   }
 

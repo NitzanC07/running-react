@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import Calculators from "../Calculators/Calculators";
 import MainMenu from "../MainMenu/MainMenu";
-import HrTargetsCalculate from '../Calculators/HrTargetsCalculate/HrTargetsCalculate';
-import Vo2maxCooperCalculate from '../Calculators/Vo2maxCooperCalculate/Vo2maxCooperCalculate';
-import Vo2maxByHr from '../Calculators/Vo2maxByHr/Vo2maxByHr';
-import FatPercentageSkinfoldCalculate from '../Calculators/FatPercentageSkinfoldCalculate/FatPercentageSkinfoldCalculate';
-import FatPercentageCalculate from '../Calculators/FatPercentageCalculate/FatPercentageCalculate';
-import BmiCalculate from '../Calculators/BmiCalculate/BmiCalculate';
+import HrTargetsCalculate from '../Calculators/HrTargetsCalculate/HrTargetsComponent';
+import Vo2maxCooperComponent from '../Calculators/Vo2maxCooperCalculate/Vo2maxCooperComponent';
+import Vo2maxByHr from '../Calculators/Vo2maxByHr/Vo2maxByHrComponent';
+import FatPercentageSkinfoldCalculate from '../Calculators/FatPercentageSkinfoldCalculate/FatPercentageSkinfoldComponent';
+import FatPercentageCalculate from '../Calculators/FatPercentageCalculate/FatPercentageComponent';
+import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
 
 function Main(props) {
     return (
@@ -26,7 +26,7 @@ function Main(props) {
 
           <Route 
             path='/calculators/vo2maxCooperCalculate'
-            element={<Vo2maxCooperCalculate />}
+            element={<Vo2maxCooperComponent />}
           />
 
           <Route 
@@ -46,7 +46,7 @@ function Main(props) {
 
           <Route 
             path='/calculators/bmiCalculate'
-            element={<BmiCalculate />}
+            element={<BmiComponent />}
           />
 
           <Route 

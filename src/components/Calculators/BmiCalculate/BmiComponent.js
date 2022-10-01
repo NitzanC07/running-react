@@ -1,31 +1,33 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import BmiCalculate from './bmiCalculator';
 
-function BmiCalculate(props) {
+function BmiComponent(props) {
 
     const [showData, setShowData] = useState(false);
-    const [age, setAge] = useState("male");
+    const [age, setAge] = useState(0);
     const [personHeight, setPersonHeight] = useState(0);
     const [weight, setWeight] = useState(0);
-    
+    const [bmiResult, setBmiResult] = useState([]);
+
     function calculateAndShowData(e) {
         e.preventDefault();
         if (personHeight > 0 && weight > 0 && age > 0) {
             setShowData(true);
         } else {
             setShowData(false);
-            console.log("Data missing.");
         }
     }
 
-    // function round_number(value, decimals){
-    //     var shifter = Math.pow(10, decimals);
-    //     return Math.round(value * shifter) / shifter;
-    // }
-
     useEffect(() => {
-        console.log(`Age: ${age}\nWeight: ${weight}\nHeight: ${personHeight}`);
-    }, [weight, age, personHeight]);
+        if (personHeight > 0 && weight > 0 && age > 0) {
+            const bmiResultInstance = new BmiCalculate(weight, personHeight, age)
+            setBmiResult(bmiResultInstance.compute());
+        } else {
+            setShowData(false);
+        }
+        
+    }, [age, personHeight, weight]);
 
     return(
         <div className="main__content calculators">
@@ -79,7 +81,7 @@ function BmiCalculate(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p>תוצאות</p>
+                        <p>תוצאה: {bmiResult[0]}<br />{bmiResult[1]}</p>
                     :
                         <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }
@@ -90,4 +92,4 @@ function BmiCalculate(props) {
     )
 }
 
-export default BmiCalculate;
+export default BmiComponent;
