@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import FatPercentageCalculate from './fatPercentageCalculate';
 
-function FatPercentageCalculate(props) {
+function FatPercentageComponent(props) {
 
     const [showData, setShowData] = useState(false);
     const [gender, setGender] = useState("male");
     const [waist, setWaist] = useState(0);
     const [weight, setWeight] = useState(0);
+    const [fpResult, setFpResult] = useState(0);
     
     function calculateAndShowData(e) {
         e.preventDefault();
@@ -14,17 +16,16 @@ function FatPercentageCalculate(props) {
             setShowData(true);
         } else {
             setShowData(false);
-            console.log("Data missing.");
         }
     }
 
-    // function round_number(value, decimals){
-    //     var shifter = Math.pow(10, decimals);
-    //     return Math.round(value * shifter) / shifter;
-    // }
-
     useEffect(() => {
-        console.log(`Gender: ${gender}\nWeight: ${weight}\nWaist: ${waist}`);
+        if (waist > 0 && weight > 0) {
+            const fatPercentageInstance = new FatPercentageCalculate(waist, weight, gender);
+            setFpResult(fatPercentageInstance.compute());
+        } else {
+            setShowData(false);
+        }
     }, [gender, weight, waist]);
 
     return(
@@ -79,7 +80,7 @@ function FatPercentageCalculate(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p>תוצאות</p>
+                        <p>תוצאה: {fpResult[0]}% אחוז שומן.<br />מסת שומן: {fpResult[1]} ק"ג.<br />מסת הגוף הרזה: {fpResult[2]} ק"ג</p>
                     :
                         <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }
@@ -90,4 +91,4 @@ function FatPercentageCalculate(props) {
     )
 }
 
-export default FatPercentageCalculate;
+export default FatPercentageComponent;

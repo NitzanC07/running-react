@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import fatPercentageSkinfoldCalculate from './fatPercentageSkinfoldCalculate';
 
 function FatPercentageSkinfoldCalculate(props) {
 
@@ -8,6 +9,7 @@ function FatPercentageSkinfoldCalculate(props) {
     const [age, setAge] = useState(0);
     const [skinfoldWaist, setSkinfoldWaist] = useState(0);
     const [weight, setWeight] = useState(0);
+    const [fpResult, setFpResult] = useState(0);
     
     function calculateAndShowData(e) {
         e.preventDefault();
@@ -15,17 +17,16 @@ function FatPercentageSkinfoldCalculate(props) {
             setShowData(true);
         } else {
             setShowData(false);
-            console.log("Data missing.");
         }
     }
 
-    // function round_number(value, decimals){
-    //     var shifter = Math.pow(10, decimals);
-    //     return Math.round(value * shifter) / shifter;
-    // }
-
     useEffect(() => {
-        console.log(`Gender: ${gender}\nAge: ${age}\nWeight: ${weight}\nSkinfold: ${skinfoldWaist}`);
+        if (age > 0 && weight > 0 && skinfoldWaist > 0) {
+            const fpInstance = new fatPercentageSkinfoldCalculate(skinfoldWaist, weight, gender, age);
+            setFpResult(fpInstance.compute());
+        } else {
+            setShowData(false);
+        }
     }, [gender, age, weight, skinfoldWaist]);
 
     return(
@@ -92,7 +93,7 @@ function FatPercentageSkinfoldCalculate(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p>תוצאות</p>
+                        <p>תוצאה: {fpResult[0]}% אחוז שומן.<br />מסת שומן: {fpResult[1]} ק"ג.<br />מסת הגוף הרזה: {fpResult[2]} ק"ג</p>
                     :
                         <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }

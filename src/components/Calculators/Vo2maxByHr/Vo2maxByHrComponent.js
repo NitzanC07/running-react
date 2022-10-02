@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Vo2maxByHrCalculate from './vo2maxByHrCalculate';
 
-function Vo2maxByHrCalculate(props) {
+function Vo2maxByHrComponent(props) {
 
     const [showData, setShowData] = useState(false);
     const [gender, setGender] = useState("male");
     const [age, setAge] = useState(0);
     const [hrRest, setHrRest] = useState(0);
+    const [vo2maxResult, setVo2maxResult] = useState(0);
     
     function calculateAndShowData(e) {
         e.preventDefault();
@@ -14,17 +16,16 @@ function Vo2maxByHrCalculate(props) {
             setShowData(true);
         } else {
             setShowData(false);
-            console.log("Data missing.");
         }
     }
 
-    // function round_number(value, decimals){
-    //     var shifter = Math.pow(10, decimals);
-    //     return Math.round(value * shifter) / shifter;
-    // }
-
     useEffect(() => {
-        console.log(`Gender: ${gender}\nAge: ${age}\nHR Rest: ${hrRest}`);
+        if (age > 0 && hrRest > 0) {
+            const vo2maxInstance = new Vo2maxByHrCalculate(age, gender, hrRest);
+            setVo2maxResult(vo2maxInstance.compute());
+        } else {
+            setShowData(false);
+        }
     }, [gender, age, hrRest]);
 
     return(
@@ -79,7 +80,7 @@ function Vo2maxByHrCalculate(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p>תוצאות</p>
+                        <p>דופק מירבי: {vo2maxResult.hrMax} פעימות לדקה.<br/>דופק מנוחה: {vo2maxResult.hrRest} פעימות לדקה.<br />צריכת חמצן מירבית: {vo2maxResult.vo2max} מ"ל לדקה לק"ג גוף.</p>
                     :
                         <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }
@@ -90,4 +91,4 @@ function Vo2maxByHrCalculate(props) {
     )
 }
 
-export default Vo2maxByHrCalculate;
+export default Vo2maxByHrComponent;

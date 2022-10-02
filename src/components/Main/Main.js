@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import Calculators from "../Calculators/Calculators";
 import MainMenu from "../MainMenu/MainMenu";
-import HrTargetsCalculate from '../Calculators/HrTargetsCalculate/HrTargetsComponent';
+import HrTargetsComponent from '../Calculators/HrTargetsCalculate/HrTargetsComponent';
 import Vo2maxCooperComponent from '../Calculators/Vo2maxCooperCalculate/Vo2maxCooperComponent';
-import Vo2maxByHr from '../Calculators/Vo2maxByHr/Vo2maxByHrComponent';
-import FatPercentageSkinfoldCalculate from '../Calculators/FatPercentageSkinfoldCalculate/FatPercentageSkinfoldComponent';
-import FatPercentageCalculate from '../Calculators/FatPercentageCalculate/FatPercentageComponent';
+import Vo2maxByHrComponent from '../Calculators/Vo2maxByHr/Vo2maxByHrComponent';
+import FatPercentageSkinfoldComponent from '../Calculators/FatPercentageSkinfoldCalculate/FatPercentageSkinfoldComponent';
+import FatPercentageComponent from '../Calculators/FatPercentageCalculate/FatPercentageComponent';
 import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
 
 function Main(props) {
@@ -20,32 +20,32 @@ function Main(props) {
           />
 
           <Route 
-            path='/calculators/hrTargetsCalculate'
-            element={<HrTargetsCalculate />}
+            path='/calculators/hr-targets-calculate'
+            element={<HrTargetsComponent />}
           />
 
           <Route 
-            path='/calculators/vo2maxCooperCalculate'
+            path='/calculators/vo2max-cooper-calculate'
             element={<Vo2maxCooperComponent />}
           />
 
           <Route 
-            path='/calculators/vo2maxByHrCalculate'
-            element={<Vo2maxByHr />}
+            path='/calculators/vo2max-by-hr-calculate'
+            element={<Vo2maxByHrComponent />}
           />
 
           <Route 
-            path='/calculators/fatPercentageSkinfoldCalculate'
-            element={<FatPercentageSkinfoldCalculate />}
+            path='/calculators/fat-percentage-skinfold-calculate'
+            element={<FatPercentageSkinfoldComponent />}
           />
 
           <Route 
-            path='/calculators/fatPercentageCalculate'
-            element={<FatPercentageCalculate />}
+            path='/calculators/fat-percentage-calculate'
+            element={<FatPercentageComponent />}
           />
 
           <Route 
-            path='/calculators/bmiCalculate'
+            path='/calculators/bmi-calculate'
             element={<BmiComponent />}
           />
 
