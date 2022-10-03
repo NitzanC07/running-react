@@ -1,0 +1,15 @@
+.footer__contant-details__item {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    padding: 5px 0 0;
+    letter-spacing: 0.08em;
+}
+
+@media screen and (max-width: 450px) {
+    .footer__contant-details__item {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

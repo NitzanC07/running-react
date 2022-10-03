@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Calculators from "../Calculators/Calculators";
+import CalculatorsMenu from "../Calculators/CalculatorsMenu";
 import MainMenu from "../MainMenu/MainMenu";
 import HrTargetsComponent from '../Calculators/HrTargetsCalculate/HrTargetsComponent';
 import Vo2maxCooperComponent from '../Calculators/Vo2maxCooperCalculate/Vo2maxCooperComponent';
@@ -16,7 +16,7 @@ function Main(props) {
 
           <Route 
             path="/calculators" 
-            element={<Calculators id="calculators" />}
+            element={<CalculatorsMenu id="calculators" />}
           />
 
           <Route 
@@ -56,9 +56,6 @@ function Main(props) {
 
         </Routes>
         
-
-        
-
       </main>
     );
   }

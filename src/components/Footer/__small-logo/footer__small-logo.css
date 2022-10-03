@@ -3,3 +3,9 @@
     margin: 0 0 0 15px;
     padding: 0;
 }
+
+@media screen and (max-width: 450px) {
+    .footer__small-logo {
+        width: 25px;
+    }
+}

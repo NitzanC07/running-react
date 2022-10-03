@@ -1,6 +1,5 @@
 .app__container{
     max-width: 1100px;
-    /* min-width: 320px; */
     height: 100vh;
     margin: 0px auto;
     position: relative;
@@ -11,6 +10,12 @@
 @media screen and (max-width: 1150px) {
     .app__container {
         margin: 0 20px;
+    }    
+}
+
+@media screen and (max-width: 281px) {
+    .app__container {
+        margin: 0 3px;
     }    
 }
   

@@ -1,4 +1,5 @@
 @import url('./vendor/normalize.css');
+@import url('./vendor/fonts/fonts.css');
 @import url('./components/App/app.css');
 @import url('./components/App/__container/app__container.css');
 @import url('./components/Header/header.css');
@@ -12,10 +13,13 @@
 
 @import url('./components/Main/main.css');
 @import url('./components/Main/__content/main__content.css');
+@import url('./components/Main/__title/main__title.css');
+@import url('./components/Main/__description/main__description.css');
 @import url('./components/Main/__menu-list/main__menu-list.css');
 @import url('./components/Main/__menu-item/main__menu-item.css');
 @import url('./components/Main/__menu-button/main__menu-button.css');
 
+@import url('./components/Calculators/__title/calculator__title.css');
 @import url('./components/Calculators/__form/calculator__form.css');
 @import url('./components/Calculators/__form/__data/calculator__form__data.css');
 @import url('./components/Calculators/__form/__input/calculator__form__input.css');

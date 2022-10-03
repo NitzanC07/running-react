@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 
-function Calculators(props) {
+function CalculatorsMenu(props) {
 
     return(
         <section className="main__content main_type_calculators" id="calculators">
             <h2 className="main__title">מחשבוני כושר</h2>
-            <p className="main__description"></p>
+            <pre className="main__description">
+                תיאור על המחשבונים.
+            </pre>
             <ul className="main__menu-list">
                 <li className="main__menu-item">
                     <Link to="/">
@@ -47,4 +49,4 @@ function Calculators(props) {
     )
 }
 
-export default Calculators;
+export default CalculatorsMenu;

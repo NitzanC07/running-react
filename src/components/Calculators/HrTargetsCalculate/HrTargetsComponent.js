@@ -17,13 +17,18 @@ function HrTargetsCalculate(props) {
   }
 
   useEffect(() => {
-    if (gender === "female") {
-      setHrMax(226 - age)
+    if (age > 0 && hrRest > 0) {
+      if (gender === "female") {
+        setHrMax(226 - age)
+      }
+      else if (gender === "male") {
+        setHrMax(220 - age)
+      }
+    } else {
+      setShowData(false);
     }
-    else if (gender === "male") {
-      setHrMax(220 - age)
-    }
-  }, [age, gender])
+    
+  }, [age, gender, hrRest])
 
   function hrTargets(evt) {
     evt.preventDefault();
@@ -95,7 +100,9 @@ function HrTargetsCalculate(props) {
             }
           </fieldset>
           :
-          ""
+          <fieldset  className="calculator__form__result">
+            <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
+          </fieldset>
         }
       </form>
     </div>
