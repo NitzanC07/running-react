@@ -95,7 +95,7 @@ function HrTargetsCalculate(props) {
             <p>דופק במנוחה (בדקה): {hrRest * 4}</p>
             {
               percentages.map((zone, i) => (
-                <p key={i}>{verbals[i]}: {round_number(((hrMax - hrRest*4) * zone + hrRest*4), 0)} פעימות לדקה.</p>
+                <p key={i}>{verbals[i]} בעצימות של {zone * 100}%:<br />{round_number(((hrMax - hrRest*4) * zone + hrRest*4), 0)} פעימות לדקה ומעלה.</p>
               ))
             }
           </fieldset>
