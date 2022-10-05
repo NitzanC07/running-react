@@ -8,8 +8,6 @@ import FatPercentageSkinfoldComponent from '../Calculators/FatPercentageSkinfold
 import FatPercentageComponent from '../Calculators/FatPercentageCalculate/FatPercentageComponent';
 import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
 
-const baseUrl = "https://nitzanc07.github.io/Running-react/";
-
 function Main(props) {
 
     return (
