@@ -58,7 +58,7 @@ function FatPercentageComponent(props) {
                     type="number" 
                     id="weight" 
                     placeholder="0" 
-                    value={weight}
+                    value={weight > 0 ? weight : ""}
                     onChange={(e) => setWeight(e.target.value)}
                     />
                 </fieldset>
@@ -70,7 +70,7 @@ function FatPercentageComponent(props) {
                     type="number" 
                     id="hrTargetsRest" 
                     placeholder="0" 
-                    value={waist}
+                    value={waist > 0 ? weight : ""}
                     onChange={(e) => setWaist(e.target.value)}
                     />
                 </fieldset>

@@ -69,7 +69,7 @@ function HrTargetsCalculate(props) {
               type="number" 
               id="hrTargetsAge" 
               placeholder="0" 
-              value={age}
+              value={age > 0 ? age : ""}
               onChange={(e) => setAge(e.target.value)}
             />
         </fieldset>
@@ -81,7 +81,7 @@ function HrTargetsCalculate(props) {
               type="number" 
               id="hrTargetsRest" 
               placeholder="0" 
-              value={hrRest}
+              value={hrRest > 0 ? hrRest : ""}
               onChange={(e) => setHrRest(e.target.value)}
             />
         </fieldset>

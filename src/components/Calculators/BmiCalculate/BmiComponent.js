@@ -47,7 +47,7 @@ function BmiComponent(props) {
                     type="number" 
                     id="weight" 
                     placeholder="0" 
-                    value={age}
+                    value={age > 0 ? age : ""}
                     onChange={(e) => setAge(e.target.value)}
                     />
                 </fieldset>
@@ -59,7 +59,7 @@ function BmiComponent(props) {
                     type="number" 
                     id="weight" 
                     placeholder="0" 
-                    value={weight}
+                    value={weight > 0 ? weight : ""}
                     onChange={(e) => setWeight(e.target.value)}
                     />
                 </fieldset>
@@ -71,7 +71,7 @@ function BmiComponent(props) {
                     type="number" 
                     id="hrTargetsRest" 
                     placeholder="0" 
-                    value={personHeight}
+                    value={personHeight > 0 ? personHeight : ""}
                     onChange={(e) => setPersonHeight(e.target.value)}
                     />
                 </fieldset>
