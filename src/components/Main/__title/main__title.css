@@ -5,3 +5,7 @@
     margin: 10px;
     padding: 0;
 }
+
+.main__title::selection {
+    background-color: #ffa;
+}

@@ -8,6 +8,10 @@
     color: rgba(150, 0, 0);
 }
 
+.calculator__form__input::selection {
+    background-color: #ffa;
+}
+
 @media screen and (max-width: 880px){
     .calculator__form__input {
         flex-direction: column;

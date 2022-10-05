@@ -31,16 +31,16 @@ function FatPercentageComponent(props) {
     return(
         <div className="main__content calculators">
         
-            <div className="BackToMenu_div">
+            <div className="main__back-to-menu">
                 <Link to="/calculators">
-                    <button className="main__back-to-menu_button">חזרה</button>
+                    <button className="main__back-to-menu__button">חזרה</button>
                 </Link>
             </div>
 
             <h2 className='calculator__title'>חישוב אחוז שומן לפי היקפים</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
                 <fieldset className='calculator__form__data'>
-                <label>מין:</label>
+                <label className="calculator__form__data-label">מין:</label>
                     <select 
                     className='calculator__form__input' 
                     value={gender}
@@ -52,7 +52,7 @@ function FatPercentageComponent(props) {
                 </fieldset>
                 
                 <fieldset className='calculator__form__data'>
-                <label>משקל (בק"ג):</label>
+                <label className="calculator__form__data-label">משקל (בק"ג):</label>
                     <input 
                     className='calculator__form__input' 
                     type="number" 
@@ -64,13 +64,13 @@ function FatPercentageComponent(props) {
                 </fieldset>
                 
                 <fieldset className='calculator__form__data'>
-                <label>היקף מותניים (בס"מ):</label>
+                <label className="calculator__form__data-label">היקף מותניים (בס"מ):</label>
                     <input
                     className='calculator__form__input' 
                     type="number" 
                     id="hrTargetsRest" 
                     placeholder="0" 
-                    value={waist > 0 ? weight : ""}
+                    value={waist > 0 ? waist : ""}
                     onChange={(e) => setWaist(e.target.value)}
                     />
                 </fieldset>
@@ -80,9 +80,13 @@ function FatPercentageComponent(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p>תוצאה: {fpResult[0]}% אחוז שומן.<br />מסת שומן: {fpResult[1]} ק"ג.<br />מסת הגוף הרזה: {fpResult[2]} ק"ג</p>
+                        <p className="calculator__form__result-content">תוצאה: {fpResult[0]}% אחוז שומן.
+                        <br className="calculator__form__result-content" />
+                        מסת שומן: {fpResult[1]} ק"ג.
+                        <br className="calculator__form__result-content" />
+                        מסת הגוף הרזה: {fpResult[2]} ק"ג</p>
                     :
-                        <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
+                        <p className="calculator__form__result-content">אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }
                 
                 </fieldset>

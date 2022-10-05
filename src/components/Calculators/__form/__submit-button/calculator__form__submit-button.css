@@ -11,6 +11,7 @@
     line-height: 24px;
     margin: 25px auto;
     cursor: pointer;
+    user-select: none;
 }
 
 .calculator__form__submit-button:hover{

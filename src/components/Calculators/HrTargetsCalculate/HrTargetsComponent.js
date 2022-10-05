@@ -42,16 +42,16 @@ function HrTargetsCalculate(props) {
   return(
     <div className="main__content calculators" id="hrtargetsTest">
     
-      <div className="BackToMenu_div">
+      <div className="main__back-to-menu">
           <Link to="/calculators">
-              <button className="BackToMenu_Button">חזרה</button>
+              <button className="main__back-to-menu__button">חזרה</button>
           </Link>
       </div>
 
       <h2 className='calculator__title'>חישוב דופק מטרה</h2> 
       <form className='calculator__form' onSubmit={hrTargets}>
         <fieldset className='calculator__form__data'>
-          <label>מין:</label>
+          <label className="calculator__form__data-label">מין:</label>
             <select 
               className='calculator__form__input' 
               value={gender}
@@ -63,7 +63,7 @@ function HrTargetsCalculate(props) {
         </fieldset>
         
         <fieldset className='calculator__form__data'>
-          <label>גיל (בשנים):</label>
+          <label className="calculator__form__data-label">גיל (בשנים):</label>
             <input 
               className='calculator__form__input' 
               type="number" 
@@ -75,7 +75,7 @@ function HrTargetsCalculate(props) {
         </fieldset>
         
         <fieldset className='calculator__form__data'>
-          <label>דופק במנוחה (15 שניות):</label>
+          <label className="calculator__form__data-label">דופק במנוחה (15 שניות):</label>
             <input
               className='calculator__form__input' 
               type="number" 
@@ -91,17 +91,17 @@ function HrTargetsCalculate(props) {
         {
           showData ?
           <fieldset  className="calculator__form__result">
-            <p>דופק מירבי: {hrMax}</p>
-            <p>דופק במנוחה (בדקה): {hrRest * 4}</p>
+            <p className="calculator__form__result-content">דופק מירבי: {hrMax}</p>
+            <p className="calculator__form__result-content">דופק במנוחה (בדקה): {hrRest * 4}</p>
             {
               percentages.map((zone, i) => (
-                <p key={i}>{verbals[i]} בעצימות של {zone * 100}%:<br />{round_number(((hrMax - hrRest*4) * zone + hrRest*4), 0)} פעימות לדקה ומעלה.</p>
+                <p className="calculator__form__result-content" key={i}>{verbals[i]} בעצימות של {zone * 100}%:<br className="calculator__form__result-content" />{round_number(((hrMax - hrRest*4) * zone + hrRest*4), 0)} פעימות לדקה ומעלה.</p>
               ))
             }
           </fieldset>
           :
           <fieldset  className="calculator__form__result">
-            <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
+            <p className="calculator__form__result-content">אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
           </fieldset>
         }
       </form>

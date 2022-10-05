@@ -32,16 +32,16 @@ function BmiComponent(props) {
     return(
         <div className="main__content calculators">
         
-            <div className="BackToMenu_div">
+            <div className="main__back-to-menu">
                 <Link to="/calculators">
-                    <button className="main__back-to-menu_button">חזרה</button>
+                    <button className="main__back-to-menu__button">חזרה</button>
                 </Link>
             </div>
 
             <h2 className='calculator__title'>חישוב יחס מסת גוף</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
                 <fieldset className='calculator__form__data'>
-                    <label>גיל (בשנים):</label>
+                    <label className="calculator__form__data-label">גיל (בשנים):</label>
                     <input 
                     className='calculator__form__input' 
                     type="number" 
@@ -53,7 +53,7 @@ function BmiComponent(props) {
                 </fieldset>
 
                 <fieldset className='calculator__form__data'>
-                <label>משקל (בק"ג):</label>
+                <label className="calculator__form__data-label">משקל (בק"ג):</label>
                     <input 
                     className='calculator__form__input' 
                     type="number" 
@@ -65,7 +65,7 @@ function BmiComponent(props) {
                 </fieldset>
                 
                 <fieldset className='calculator__form__data'>
-                <label>גובה (בס"מ):</label>
+                <label className="calculator__form__data-label">גובה (בס"מ):</label>
                     <input
                     className='calculator__form__input' 
                     type="number" 
@@ -81,9 +81,11 @@ function BmiComponent(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p>תוצאה: {bmiResult[0]}<br />{bmiResult[1]}</p>
+                        <p className="calculator__form__result-content">תוצאה: {bmiResult[0]}
+                        <br className="calculator__form__result-content" />
+                        {bmiResult[1]}</p>
                     :
-                        <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
+                        <p className="calculator__form__result-content">אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }
                 
                 </fieldset>

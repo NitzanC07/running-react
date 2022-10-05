@@ -12,6 +12,8 @@
 @import url('./components/Footer/__contact-details/__item/footer__contact-details__item.css');
 
 @import url('./components/Main/main.css');
+@import url('./components/Main/__back-to-menu/main__back-to-menu.css');
+@import url('./components/Main/__back-to-menu/__button/main__back-to-menu__button.css');
 @import url('./components/Main/__content/main__content.css');
 @import url('./components/Main/__title/main__title.css');
 @import url('./components/Main/__description/main__description.css');
@@ -22,6 +24,8 @@
 @import url('./components/Calculators/__title/calculator__title.css');
 @import url('./components/Calculators/__form/calculator__form.css');
 @import url('./components/Calculators/__form/__data/calculator__form__data.css');
+@import url('./components/Calculators/__form/__data/calculator__form__data-label.css');
 @import url('./components/Calculators/__form/__input/calculator__form__input.css');
 @import url('./components/Calculators/__form/__submit-button/calculator__form__submit-button.css');
 @import url('./components/Calculators/__form/__result/calculator__form__result.css');
+@import url('./components/Calculators/__form/__result/calculator__form__result-content.css');

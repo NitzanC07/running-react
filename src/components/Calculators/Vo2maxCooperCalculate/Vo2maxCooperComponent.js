@@ -32,16 +32,16 @@ function Vo2maxCooperComponent(props) {
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
         
-            <div className="BackToMenu_div">
+            <div className="main__back-to-menu">
                 <Link to="/calculators">
-                    <button className="main__back-to-menu_button">חזרה</button>
+                    <button className="main__back-to-menu__button">חזרה</button>
                 </Link>
             </div>
 
             <h2 className='calculator__title'>חישוב צריכת חמצן מירבית לפי מבחן קופר</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
                 <fieldset className='calculator__form__data'>
-                <label>מין:</label>
+                <label className="calculator__form__data-label">מין:</label>
                     <select 
                     className='calculator__form__input' 
                     value={gender}
@@ -53,7 +53,7 @@ function Vo2maxCooperComponent(props) {
                 </fieldset>
 
                 <fieldset className='calculator__form__data'>
-                <label>גיל (בשנים):</label>
+                <label className="calculator__form__data-label">גיל (בשנים):</label>
                     <input 
                     className='calculator__form__input' 
                     type="number" 
@@ -65,7 +65,7 @@ function Vo2maxCooperComponent(props) {
                 </fieldset>
                 
                 <fieldset className='calculator__form__data'>
-                <label>משקל (בק"ג):</label>
+                <label className="calculator__form__data-label">משקל (בק"ג):</label>
                     <input 
                     className='calculator__form__input' 
                     type="number" 
@@ -77,7 +77,7 @@ function Vo2maxCooperComponent(props) {
                 </fieldset>
                 
                 <fieldset className='calculator__form__data'>
-                <label>מרחק ריצה ב-12 דקות (במטרים):</label>
+                <label className="calculator__form__data-label">מרחק ריצה ב-12 דקות (במטרים):</label>
                     <input
                     className='calculator__form__input' 
                     type="number" 
@@ -93,9 +93,9 @@ function Vo2maxCooperComponent(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p>תוצאה: {vo2maxResult[0]} מ"ל לדקה לק"ג גוף.<br />{vo2maxResult[1]} ליטר חמצן לדקה עבור גוף במשקל {weight} ק"ג.</p>
+                        <p className="calculator__form__result-content">תוצאה: {vo2maxResult[0]} מ"ל לדקה לק"ג גוף.<br className="calculator__form__result-content" />{vo2maxResult[1]} ליטר חמצן לדקה עבור גוף במשקל {weight} ק"ג.</p>
                     :
-                        <p>אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
+                        <p className="calculator__form__result-content">אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }
                 
                 </fieldset>

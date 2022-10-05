@@ -1,0 +1,16 @@
+.main__back-to-menu__button {
+    cursor: pointer;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 5px 10px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(100, 0, 0, 1);
+    border: 0px solid rgba(100, 0, 0, 1);
+    border-radius: 3px;
+}
+
+.main__back-to-menu__button:hover {
+    background-color: rgba(100, 0, 0, 0.7);
+    box-shadow: 4px 4px 4px #aaa;
+}

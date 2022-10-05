@@ -1,11 +1,9 @@
-.main__description {
+.calculator__form__data-label {
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 18px;
-    margin: 15px 25px;
-    padding: 0;
 }
 
-.main__description::selection {
+.calculator__form__data-label::selection {
     background-color: #ffa;
 }
