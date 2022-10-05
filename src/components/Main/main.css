@@ -6,6 +6,8 @@
     position: relative;
     background-color: #fff;
     border-radius: 7px;
-    /* background-image: url("https://pixnio.com/free-images/2019/01/10/2019-01-10-09-43-44.jpg");
-    background-position: center; */
+    background-image: url("../../images/covers/nitzan-black-and-white-01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
