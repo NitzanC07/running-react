@@ -1,7 +1,7 @@
 {
   "name": "running-react",
   "version": "0.1.0",
-  "homepage": "https://github.com/NitzanC07/Running-react/src",
+  "homepage": "https://github.com/NitzanC07/Running-react",
   "private": true,
   "main": "index.js",
   "dependencies": {
