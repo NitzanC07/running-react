@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/NitzanC07/Running-react/static/css/main.5be082fb.css",
-    "main.js": "/NitzanC07/Running-react/static/js/main.8ca902e9.js",
-    "static/js/787.183064c6.chunk.js": "/NitzanC07/Running-react/static/js/787.183064c6.chunk.js",
-    "static/media/nitzan-black-and-white-01.jpg": "/NitzanC07/Running-react/static/media/nitzan-black-and-white-01.8e07f3ac40f4ca4fde6d.jpg",
-    "static/media/Rubik-Regular.ttf": "/NitzanC07/Running-react/static/media/Rubik-Regular.da39336cfcac7980f2f1.ttf",
-    "static/media/Rubik-Bold.ttf": "/NitzanC07/Running-react/static/media/Rubik-Bold.383b8c94b12034c5e8b5.ttf",
-    "static/media/LongLogo2.png": "/NitzanC07/Running-react/static/media/LongLogo2.4bc7190d61a0243be8c5.png",
-    "static/media/logoGIF.png": "/NitzanC07/Running-react/static/media/logoGIF.fed83bd93566178edfa1.png",
-    "static/media/yehudaclm-light-webfont.woff": "/NitzanC07/Running-react/static/media/yehudaclm-light-webfont.f16efcf8f9fb56765f7e.woff",
-    "index.html": "/NitzanC07/Running-react/index.html",
-    "main.5be082fb.css.map": "/NitzanC07/Running-react/static/css/main.5be082fb.css.map",
-    "main.8ca902e9.js.map": "/NitzanC07/Running-react/static/js/main.8ca902e9.js.map",
-    "787.183064c6.chunk.js.map": "/NitzanC07/Running-react/static/js/787.183064c6.chunk.js.map"
+    "main.css": "/Running-react/static/css/main.13f91772.css",
+    "main.js": "/Running-react/static/js/main.86af8a1d.js",
+    "static/js/787.183064c6.chunk.js": "/Running-react/static/js/787.183064c6.chunk.js",
+    "static/media/nitzan-black-and-white-01.jpg": "/Running-react/static/media/nitzan-black-and-white-01.8e07f3ac40f4ca4fde6d.jpg",
+    "static/media/Rubik-Regular.ttf": "/Running-react/static/media/Rubik-Regular.da39336cfcac7980f2f1.ttf",
+    "static/media/Rubik-Bold.ttf": "/Running-react/static/media/Rubik-Bold.383b8c94b12034c5e8b5.ttf",
+    "static/media/LongLogo2.png": "/Running-react/static/media/LongLogo2.4bc7190d61a0243be8c5.png",
+    "static/media/logoGIF.png": "/Running-react/static/media/logoGIF.fed83bd93566178edfa1.png",
+    "static/media/yehudaclm-light-webfont.woff": "/Running-react/static/media/yehudaclm-light-webfont.f16efcf8f9fb56765f7e.woff",
+    "index.html": "/Running-react/index.html",
+    "main.13f91772.css.map": "/Running-react/static/css/main.13f91772.css.map",
+    "main.86af8a1d.js.map": "/Running-react/static/js/main.86af8a1d.js.map",
+    "787.183064c6.chunk.js.map": "/Running-react/static/js/787.183064c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5be082fb.css",
-    "static/js/main.8ca902e9.js"
+    "static/css/main.13f91772.css",
+    "static/js/main.86af8a1d.js"
   ]
 }
