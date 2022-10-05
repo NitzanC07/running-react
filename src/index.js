@@ -9,7 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <HashRouter>
+      <HashRouter
+        basename='https://nitzanc07.github.io/Running-react/'
+      >
         <App />  
       </HashRouter>
     </BrowserRouter>
