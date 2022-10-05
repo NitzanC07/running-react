@@ -8,11 +8,19 @@ import FatPercentageSkinfoldComponent from '../Calculators/FatPercentageSkinfold
 import FatPercentageComponent from '../Calculators/FatPercentageCalculate/FatPercentageComponent';
 import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
 
+const baseUrl = "https://nitzanc07.github.io/Running-react/";
+
 function Main(props) {
+
     return (
       <main className="main">
 
         <Routes>
+
+          <Route 
+            path='/'
+            element={<MainMenu id="main-menu" />}
+          />
 
           <Route 
             path="/calculators" 
@@ -47,11 +55,6 @@ function Main(props) {
           <Route 
             path='/calculators/bmi-calculate'
             element={<BmiComponent />}
-          />
-
-          <Route 
-            path="/" 
-            element={<MainMenu id="main-menu" />}
           />
 
         </Routes>
