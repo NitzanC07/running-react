@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
 
 function HrTargetsCalculate(props) {
 
@@ -42,11 +42,7 @@ function HrTargetsCalculate(props) {
   return(
     <div className="main__content calculators" id="hrtargetsTest">
     
-      <div className="main__back-to-menu">
-          <Link to="/calculators">
-              <button className="main__back-to-menu__button">חזרה</button>
-          </Link>
-      </div>
+      <SecondaryMenu />
 
       <h2 className='calculator__title'>חישוב דופק מטרה</h2> 
       <form className='calculator__form' onSubmit={hrTargets}>

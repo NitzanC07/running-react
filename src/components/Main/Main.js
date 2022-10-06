@@ -16,7 +16,7 @@ function Main(props) {
         <Routes>
 
           <Route 
-            path='/'
+            exact path='/'
             element={<MainMenu id="main-menu" />}
           />
 

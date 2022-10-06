@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Vo2maxCooperCalculate from './vo2maxCooperCalculate';
+import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
 
 function Vo2maxCooperComponent(props) {
 
@@ -32,11 +32,7 @@ function Vo2maxCooperComponent(props) {
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
         
-            <div className="main__back-to-menu">
-                <Link to="/calculators">
-                    <button className="main__back-to-menu__button">חזרה</button>
-                </Link>
-            </div>
+            <SecondaryMenu />
 
             <h2 className='calculator__title'>חישוב צריכת חמצן מירבית לפי מבחן קופר</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
@@ -93,7 +89,9 @@ function Vo2maxCooperComponent(props) {
                 <fieldset  className="calculator__form__result">
                 {
                     showData ? 
-                        <p className="calculator__form__result-content">תוצאה: {vo2maxResult[0]} מ"ל לדקה לק"ג גוף.<br className="calculator__form__result-content" />{vo2maxResult[1]} ליטר חמצן לדקה עבור גוף במשקל {weight} ק"ג.</p>
+                        <p className="calculator__form__result-content">צריכת חמצן מירבית: {vo2maxResult[0]} מ"ל חמצן לדקה לק"ג גוף.
+                        <br className="calculator__form__result-content" />
+                        {vo2maxResult[1]} ליטר חמצן לדקה עבור גוף במשקל {weight} ק"ג.</p>
                     :
                         <p className="calculator__form__result-content">אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }

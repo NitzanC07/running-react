@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import fatPercentageSkinfoldCalculate from './fatPercentageSkinfoldCalculate';
+import SecondaryMenu from "../../SecondaryMenu/SecondaryMenu";
 
 function FatPercentageSkinfoldCalculate(props) {
 
@@ -32,11 +32,7 @@ function FatPercentageSkinfoldCalculate(props) {
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
         
-            <div className="main__back-to-menu">
-                <Link to="/calculators">
-                    <button className="main__back-to-menu__button">חזרה</button>
-                </Link>
-            </div>
+            <SecondaryMenu />
 
             <h2 className='calculator__title'>חישוב אחוז שומן לפי קפלי עור</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import FatPercentageCalculate from './fatPercentageCalculate';
+import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
 
 function FatPercentageComponent(props) {
 
@@ -31,11 +31,7 @@ function FatPercentageComponent(props) {
     return(
         <div className="main__content calculators">
         
-            <div className="main__back-to-menu">
-                <Link to="/calculators">
-                    <button className="main__back-to-menu__button">חזרה</button>
-                </Link>
-            </div>
+            <SecondaryMenu />
 
             <h2 className='calculator__title'>חישוב אחוז שומן לפי היקפים</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>

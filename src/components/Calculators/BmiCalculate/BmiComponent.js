@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import BmiCalculate from './bmiCalculator';
+import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
 
 function BmiComponent(props) {
 
@@ -32,11 +32,7 @@ function BmiComponent(props) {
     return(
         <div className="main__content calculators">
         
-            <div className="main__back-to-menu">
-                <Link to="/calculators">
-                    <button className="main__back-to-menu__button">חזרה</button>
-                </Link>
-            </div>
+            <SecondaryMenu />
 
             <h2 className='calculator__title'>חישוב יחס מסת גוף</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>

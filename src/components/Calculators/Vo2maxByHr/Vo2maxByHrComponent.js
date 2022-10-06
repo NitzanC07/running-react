@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Vo2maxByHrCalculate from './vo2maxByHrCalculate';
+import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
 
 function Vo2maxByHrComponent(props) {
 
@@ -31,11 +31,7 @@ function Vo2maxByHrComponent(props) {
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
         
-            <div className="main__back-to-menu">
-                <Link to="/calculators">
-                    <button className="main__back-to-menu__button">חזרה</button>
-                </Link>
-            </div>
+            <SecondaryMenu />
 
             <h2 className='calculator__title'>חישוב צריכת חמצן מירבית לפי דופק</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
@@ -84,7 +80,7 @@ function Vo2maxByHrComponent(props) {
                         <br className="calculator__form__result-content" />
                         דופק מנוחה: {vo2maxResult.hrRest} פעימות לדקה.
                         <br className="calculator__form__result-content" />
-                        צריכת חמצן מירבית: {vo2maxResult.vo2max} מ"ל לדקה לק"ג גוף.</p>
+                        צריכת חמצן מירבית: {vo2maxResult.vo2max} מ"ל חמצן לדקה לק"ג גוף.</p>
                     :
                         <p className="calculator__form__result-content">אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }

@@ -4,7 +4,7 @@ function CalculatorsMenu(props) {
 
     return(
         <section className="main__content main_type_calculators" id="calculators">
-            <h2 className="main__title">מחשבוני כושר</h2>
+            <h2 className="main__title">מחשבוני כושר ובריאות</h2>
             <pre className="main__description">
                 תיאור על המחשבונים.
             </pre>
