@@ -1,4 +1,4 @@
-# Personal project
+# Personal project Sport & Healthy
 SPA (Single Page Application) for [Nitzan Cohen Running Trainer](https://nitzanc07.github.io/Running-react/) project
 
 ## About the project
