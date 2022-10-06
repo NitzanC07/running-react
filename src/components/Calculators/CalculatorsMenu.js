@@ -12,9 +12,9 @@ function CalculatorsMenu(props) {
             />
 
             <h2 className="main__title">מחשבוני כושר ובריאות</h2>
-            <pre className="main__description">
+            <p className="main__description">
                 תיאור על המחשבונים.
-            </pre>
+            </p>
             <ul className="main__menu-list">
                 <li className="main__menu-item">
                     <Link to={`/${props.id}/hr-targets-calculate`}>

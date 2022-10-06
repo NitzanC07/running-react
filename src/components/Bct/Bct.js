@@ -10,9 +10,9 @@ function Bct(props) {
             />
 
             <h2 className="main__title">מבחן תיאום גופני (BCT)</h2>
-            <pre className="main__description">
+            <p className="main__description">
                 תיאור מבחן תיאום גופני (Body Coordination Test).
-            </pre>
+            </p>
 
         </section>
     )

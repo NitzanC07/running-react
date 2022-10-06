@@ -10,9 +10,9 @@ function TrainingPlans(props) {
             />
 
             <h2 className="main__title">תוכניות אימון</h2>
-            <pre className="main__description">
+            <p className="main__description">
                 תוכניות אימון מהצעד הראשון ועד רצים מיומנים.
-            </pre>
+            </p>
 
         </section>
     )
