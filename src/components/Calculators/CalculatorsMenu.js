@@ -1,19 +1,21 @@
 import { Link } from 'react-router-dom';
+import SecondaryMenu from '../SecondaryMenu/SecondaryMenu';
 
 function CalculatorsMenu(props) {
 
     return(
         <section className="main__content main_type_calculators" id="calculators">
+
+            <SecondaryMenu 
+                page="calculators"
+                name="מחשבוני כושר"
+            />
+
             <h2 className="main__title">מחשבוני כושר ובריאות</h2>
             <pre className="main__description">
                 תיאור על המחשבונים.
             </pre>
             <ul className="main__menu-list">
-                <li className="main__menu-item">
-                    <Link to="/">
-                        <button type="button" className="main__menu-button main__menu-button_type_main" id="main">עמוד ראשי</button>
-                    </Link>
-                </li>
                 <li className="main__menu-item">
                     <Link to={`/${props.id}/hr-targets-calculate`}>
                         <button type="button" className="main__menu-button main__menu-button_type_hrTargetCalculate" id="hrTargetsCalculate">חישוב דופק מטרה לאימון</button>

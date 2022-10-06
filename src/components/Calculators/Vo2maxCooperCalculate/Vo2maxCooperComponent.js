@@ -32,7 +32,10 @@ function Vo2maxCooperComponent(props) {
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
         
-            <SecondaryMenu />
+            <SecondaryMenu 
+                page="calculators"
+                name="מחשבוני כושר"
+            />
 
             <h2 className='calculator__title'>חישוב צריכת חמצן מירבית לפי מבחן קופר</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>

@@ -8,8 +8,14 @@ function MainMenu(props) {
       <p className="main__description">בלה בלה בלה</p>
       <ul className="main__menu-list">
         <li className="main__menu-item">
-          <Link to="/">
-            <button type="button" className="main__menu-button main__menu-button_type_trainning-plans" id="trainning-plans">תוכניות אימון</button>
+          <Link to="/training-plans">
+            <button 
+              type="button" 
+              className="main__menu-button main__menu-button_type_trainning-plans" 
+              id="training-plans"
+            >
+              תוכניות אימון
+            </button>
           </Link>
         </li>
         <li className="main__menu-item">
@@ -23,8 +29,14 @@ function MainMenu(props) {
           </Link>
         </li>
         <li className="main__menu-item">
-          <Link to="/">
-            <button type="button" className="main__menu-button main__menu-button_type_bct" id="bct">מבחן תיאום גופני<br/>Body Coordination Test</button>
+          <Link to="/bct">
+            <button 
+              type="button" 
+              className="main__menu-button main__menu-button_type_bct" 
+              id="bct"
+            >
+              מבחן תיאום גופני<br/>Body Coordination Test
+            </button>
           </Link>
         </li>
       </ul>

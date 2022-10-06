@@ -31,7 +31,10 @@ function FatPercentageComponent(props) {
     return(
         <div className="main__content calculators">
         
-            <SecondaryMenu />
+            <SecondaryMenu 
+                page="calculators"
+                name="מחשבוני כושר"
+            />
 
             <h2 className='calculator__title'>חישוב אחוז שומן לפי היקפים</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>

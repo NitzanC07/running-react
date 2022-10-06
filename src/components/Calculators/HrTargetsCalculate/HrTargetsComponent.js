@@ -42,7 +42,10 @@ function HrTargetsCalculate(props) {
   return(
     <div className="main__content calculators" id="hrtargetsTest">
     
-      <SecondaryMenu />
+      <SecondaryMenu 
+        page="calculators"
+        name="מחשבוני כושר"
+      />
 
       <h2 className='calculator__title'>חישוב דופק מטרה</h2> 
       <form className='calculator__form' onSubmit={hrTargets}>

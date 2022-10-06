@@ -32,7 +32,10 @@ function BmiComponent(props) {
     return(
         <div className="main__content calculators">
         
-            <SecondaryMenu />
+            <SecondaryMenu
+                page="calculators"
+                name="מחשבוני כושר"
+            />
 
             <h2 className='calculator__title'>חישוב יחס מסת גוף</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
