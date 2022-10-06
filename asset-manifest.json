@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Running-react/static/css/main.6d473b27.css",
-    "main.js": "/Running-react/static/js/main.89f5e511.js",
+    "main.js": "/Running-react/static/js/main.9f086c6e.js",
     "static/js/787.183064c6.chunk.js": "/Running-react/static/js/787.183064c6.chunk.js",
     "static/media/nitzan-black-and-white-01.jpg": "/Running-react/static/media/nitzan-black-and-white-01.8e07f3ac40f4ca4fde6d.jpg",
     "static/media/Rubik-Regular.ttf": "/Running-react/static/media/Rubik-Regular.da39336cfcac7980f2f1.ttf",
@@ -11,11 +11,11 @@
     "static/media/yehudaclm-light-webfont.woff": "/Running-react/static/media/yehudaclm-light-webfont.f16efcf8f9fb56765f7e.woff",
     "index.html": "/Running-react/index.html",
     "main.6d473b27.css.map": "/Running-react/static/css/main.6d473b27.css.map",
-    "main.89f5e511.js.map": "/Running-react/static/js/main.89f5e511.js.map",
+    "main.9f086c6e.js.map": "/Running-react/static/js/main.9f086c6e.js.map",
     "787.183064c6.chunk.js.map": "/Running-react/static/js/787.183064c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6d473b27.css",
-    "static/js/main.89f5e511.js"
+    "static/js/main.9f086c6e.js"
   ]
 }
