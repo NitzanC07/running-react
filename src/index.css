@@ -23,6 +23,8 @@
 @import url('./components/SecondaryMenu/__button/secondary-menu__button.css');
 
 @import url('./components/Calculators/__title/calculator__title.css');
+@import url('./components/Calculators/__subtitle/calculator__subtitle.css');
+@import url('./components/Calculators/__text/calculator__text.css');
 @import url('./components/Calculators/__form/calculator__form.css');
 @import url('./components/Calculators/__form/__data/calculator__form__data.css');
 @import url('./components/Calculators/__form/__data/calculator__form__data-label.css');

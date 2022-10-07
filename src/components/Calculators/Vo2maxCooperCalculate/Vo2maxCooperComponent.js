@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Vo2maxCooperCalculate from './vo2maxCooperCalculate';
 import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
+import Vo2maxTable from '../../../utils/vo2maxTable';
 
 function Vo2maxCooperComponent(props) {
 
@@ -10,6 +11,7 @@ function Vo2maxCooperComponent(props) {
     const [weight, setWeight] = useState(0);
     const [distance, setDistance] = useState(0);
     const [vo2maxResult, setVo2maxResult] = useState(0);
+    const [theory, setTheory] = useState(false);
     
     function calculateAndShowData(e) {
         e.preventDefault();
@@ -29,6 +31,19 @@ function Vo2maxCooperComponent(props) {
         }
     }, [distance, weight, gender, age]);
 
+    function showTheory() {
+        if (!theory) {
+            setTheory(true);
+        } else {
+            setTheory(false);
+        }
+    }
+
+    useEffect(() => {
+        const vo2maxDetails = new Vo2maxTable(gender, age, distance);
+        console.log(vo2maxDetails);
+    })
+
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
         
@@ -38,6 +53,7 @@ function Vo2maxCooperComponent(props) {
             />
 
             <h2 className='calculator__title'>חישוב צריכת חמצן מירבית לפי מבחן קופר</h2> 
+
             <form className='calculator__form' onSubmit={calculateAndShowData}>
                 <fieldset className='calculator__form__data'>
                 <label className="calculator__form__data-label">מין:</label>
@@ -101,6 +117,62 @@ function Vo2maxCooperComponent(props) {
                 
                 </fieldset>
             </form>
+
+            <h3 className='calculator__subtitle' onClick={showTheory}>שקלול התוצאה</h3>
+            {
+                !theory ? 
+                <table border={'1px solid #000'}>
+                    <tr>
+                        <td rowSpan={2}>גיל</td>
+                        <td colSpan={5}>רמת כושר גופני</td>
+                    </tr>
+                    <tr>
+                        <td>גבוהה מאוד</td>
+                        <td>גבוהה</td>
+                        <td>בינונית</td>
+                        <td>נמוכה</td>
+                        <td>נמוכה מאוד</td>
+                    </tr>
+                    <tr>
+                        <td>20-30</td>
+                        <td>60</td>
+                        <td>50</td>
+                        <td>40</td>
+                        <td>30</td>
+                        <td>20</td>
+                    </tr>
+                </table>                
+                :
+                ""
+            }
+
+            <h3 className='calculator__subtitle' onClick={showTheory}>רקע תאורתי</h3>
+            {
+                theory ? 
+                <div>
+                    <p className='calculator__text'>
+                        התהליך האירובי מחייב כמות של כ-3.5 מ"ל חמצן לכל 1 ק"ג גוף לדקה במצב מנוחה. 
+                        לדוגמא, עבור אדם השוקל 70 ק"ג, קצב צריכת החמצן שלו למשך דקה אחת צריך להיות כ-245 מ"ל חמצן.
+                        יתר על כן, כאשר אנו עוסקים בפעילות גופנית מאומצת מעניינת אותנו צריכת החמצן המירבית (צח"מ) 
+                        של הגוף, מכיוון שנתון זה יכול לתת לנו מידע לגבי היכולת האירובית המירבית של האדם. כלומר באיזה
+                        שלב הגוף ממצה את הפקת האנרגיה ממקורות אירוביים, ומתחיל להפיק אנרגיה ממקורות אנאירוביים.
+                    </p>
+                    <p className='calculator__text'>
+                        בדיקת צריכת חמצת מירבית מתבצעת בדרך כלל במעבדה שבה הנבדק רץ על מסילה בקצב מתגבר עד לנקודה שבה 
+                        למרות שקצב הריצה עולה, צריכת החמצן אינה עולה, ואפילו יורדת. כמו כן, בדרך כלל בנקודה זו גם נוכל
+                        למצוא את קצב הלב (דופק) המירבי, שכן ישנה התאמה בין צריכת החמצן המירבית לבין הדופק המירבי. 
+                        דרך נוספת להעריך את צריכת החמצן המירבית היא באמצעות מבחן שדה שפותח בצבא האמריקאי שבמסגרתו
+                        צריך לרוץ במשך 12 דקות מרחק גדול ככל שניתן. לאחר מכן ניתן לקבל הערכה של צריכת החמצן המירבית
+                        לפי חישוב שניתן להשתמש במחשבון שלהלן.
+                    </p>
+                    <p className='calculator__text'>
+                        כמו כן, לרוב בדיקה זו תתבצע על ספורטאים מקצוענים או חובבי ספורט מיומנים, ולא נבצע בדיקה זו על
+                        מאומנים מתחילים, או אנשים שיש להם בעיות בריאותיות שמגבילות להגיע למאמצים גבוהים. 
+                    </p>
+                </div>                
+                :
+                ""
+            }
         </div>
     )
 }
