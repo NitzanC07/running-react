@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Vo2maxCooperCalculate from './vo2maxCooperCalculate';
 import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
-import Vo2maxTable from '../../../utils/vo2maxTable';
 
 function Vo2maxCooperComponent(props) {
 
@@ -11,38 +10,46 @@ function Vo2maxCooperComponent(props) {
     const [weight, setWeight] = useState(0);
     const [distance, setDistance] = useState(0);
     const [vo2maxResult, setVo2maxResult] = useState(0);
-    const [theory, setTheory] = useState(false);
+    const [showTheory, setShowTheory] = useState(false);
+    const [dataTable, setDataTable] = useState({});
+    const [ageGroups, setAgeGroups] = useState([]);
+    const [showResultTable, setShowResultTable] = useState(false);
     
-    function calculateAndShowData(e) {
-        e.preventDefault();
-        if (weight > 0 && distance > 0) {
-            setShowData(true);
-        } else {
-            setShowData(false);
-        }
-    }
-
     useEffect(() => {
-        if (weight > 0 && distance > 0) {
-            const vo2maxCooperCalculateInastance = new Vo2maxCooperCalculate(distance, weight, gender, age);
+        if (weight > 0 && distance > 0 && age > 0) {
+            const vo2maxCooperCalculateInastance = new Vo2maxCooperCalculate(distance, weight, gender, age);        
             setVo2maxResult(vo2maxCooperCalculateInastance.compute());
+            setDataTable(vo2maxCooperCalculateInastance.dataTables());
         } else {
             setShowData(false);
         }
     }, [distance, weight, gender, age]);
-
-    function showTheory() {
-        if (!theory) {
-            setTheory(true);
+    
+    function calculateAndShowData(e) {
+        e.preventDefault();
+        if (weight > 0 && distance > 0 && age > 0) {
+            setShowData(true);
+            setAgeGroups(Object.keys(dataTable));
         } else {
-            setTheory(false);
+            setShowData(false);
         }
     }
 
-    useEffect(() => {
-        const vo2maxDetails = new Vo2maxTable(gender, age, distance);
-        console.log(vo2maxDetails);
-    })
+    function changeShowshowTheory() {
+        if (!showTheory) {
+            setShowTheory(true);
+        } else {
+            setShowTheory(false);
+        }
+    }
+
+    function changeShowResultTable() {
+        if (!showResultTable) {
+            setShowResultTable(true);
+        } else {
+            setShowResultTable(false);
+        }
+    }
 
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
@@ -118,37 +125,47 @@ function Vo2maxCooperComponent(props) {
                 </fieldset>
             </form>
 
-            <h3 className='calculator__subtitle' onClick={showTheory}>שקלול התוצאה</h3>
+            <h3 className='calculator__subtitle' onClick={changeShowResultTable}>שקלול התוצאה</h3>
             {
-                !theory ? 
-                <table border={'1px solid #000'}>
-                    <tr>
-                        <td rowSpan={2}>גיל</td>
-                        <td colSpan={5}>רמת כושר גופני</td>
-                    </tr>
-                    <tr>
-                        <td>גבוהה מאוד</td>
-                        <td>גבוהה</td>
-                        <td>בינונית</td>
-                        <td>נמוכה</td>
-                        <td>נמוכה מאוד</td>
-                    </tr>
-                    <tr>
-                        <td>20-30</td>
-                        <td>60</td>
-                        <td>50</td>
-                        <td>40</td>
-                        <td>30</td>
-                        <td>20</td>
-                    </tr>
-                </table>                
+                showResultTable ? 
+                <div>
+                    <p className='calculator__text'>{gender === 'male' ? 'גברים' : 'נשים'}</p>
+                    <table border={'1px'}>
+                        <tbody>
+                        <tr>
+                            <td rowSpan={2}>גיל</td>
+                            <td colSpan={5}>רמת כושר גופני</td>
+                        </tr>
+                        <tr>
+                            <td>נמוכה מאוד</td>
+                            <td>נמוכה</td>
+                            <td>בינונית</td>
+                            <td>גבוהה</td>
+                            <td>גבוהה מאוד</td>
+                        </tr>
+                        {
+                            ageGroups.map((ageGroup, index) => (
+                                <tr key={index}>
+                                    <td>{ageGroup}</td>
+                                    <td>{dataTable[ageGroup][0]}</td>
+                                    <td>{dataTable[ageGroup][1]}</td>
+                                    <td>{dataTable[ageGroup][2]}</td>
+                                    <td>{dataTable[ageGroup][3]}</td>
+                                    <td>{dataTable[ageGroup][4]}</td>
+                                </tr>
+                            ))
+                        }
+                        
+                        </tbody>
+                    </table>
+                </div>
                 :
                 ""
             }
 
-            <h3 className='calculator__subtitle' onClick={showTheory}>רקע תאורתי</h3>
+            <h3 className='calculator__subtitle' onClick={changeShowshowTheory}>רקע תאורתי</h3>
             {
-                theory ? 
+                showTheory ? 
                 <div>
                     <p className='calculator__text'>
                         התהליך האירובי מחייב כמות של כ-3.5 מ"ל חמצן לכל 1 ק"ג גוף לדקה במצב מנוחה. 
