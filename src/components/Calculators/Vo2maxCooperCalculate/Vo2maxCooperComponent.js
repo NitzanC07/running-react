@@ -147,11 +147,11 @@ function Vo2maxCooperComponent(props) {
                             ageGroups.map((ageGroup, index) => (
                                 <tr key={index}>
                                     <td>{ageGroup}</td>
-                                    <td>{dataTable[ageGroup][0]}</td>
-                                    <td>{dataTable[ageGroup][1]}</td>
-                                    <td>{dataTable[ageGroup][2]}</td>
-                                    <td>{dataTable[ageGroup][3]}</td>
-                                    <td>{dataTable[ageGroup][4]}</td>
+                                    <td id={`${ageGroup}_0`}>{dataTable[ageGroup][0]}</td>
+                                    <td id={`${ageGroup}_1`}>{dataTable[ageGroup][1]}</td>
+                                    <td id={`${ageGroup}_2`}>{dataTable[ageGroup][2]}</td>
+                                    <td id={`${ageGroup}_3`}>{dataTable[ageGroup][3]}</td>
+                                    <td id={`${ageGroup}_4`}>{dataTable[ageGroup][4]}</td>
                                 </tr>
                             ))
                         }
