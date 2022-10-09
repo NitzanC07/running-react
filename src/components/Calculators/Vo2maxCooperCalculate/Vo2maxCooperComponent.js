@@ -14,6 +14,7 @@ function Vo2maxCooperComponent(props) {
     const [dataTable, setDataTable] = useState({});
     const [ageGroups, setAgeGroups] = useState([]);
     const [showResultTable, setShowResultTable] = useState(false);
+    const [selectCellId, setSelectCellId] = useState('');
     
     useEffect(() => {
         if (weight > 0 && distance > 0 && age > 0) {
@@ -24,7 +25,31 @@ function Vo2maxCooperComponent(props) {
             setShowData(false);
         }
     }, [distance, weight, gender, age]);
-    
+
+    useEffect(() => {
+        // vo2maxResult, dataTable, age
+        setSelectCellId('');
+        for (let i = 0; i < ageGroups.length; i++) {
+            const minAgeRange = Number(ageGroups[i].slice(0, 2))
+            if (age >= minAgeRange && age <= minAgeRange + 9) {
+                const relevantAgeGroup = dataTable[ageGroups[i]]
+                for (let j = 0; j < relevantAgeGroup.length; j++) {
+                    if (relevantAgeGroup[j+1] && vo2maxResult[0] >= relevantAgeGroup[0]) {
+                        if (vo2maxResult[0] >= relevantAgeGroup[j] && vo2maxResult[0] < relevantAgeGroup[j+1]) {
+                            const cellId = `${ageGroups[i]}_${j}`
+                            setSelectCellId(cellId);
+                        }
+                    } else {
+                        if (vo2maxResult[0] >= relevantAgeGroup[j]) {
+                            const cellId = `${ageGroups[i]}_${j}`
+                            setSelectCellId(cellId);
+                        }
+                    }
+                }
+            } 
+        }
+    }, [age, ageGroups, dataTable, vo2maxResult])
+
     function calculateAndShowData(e) {
         e.preventDefault();
         if (weight > 0 && distance > 0 && age > 0) {
@@ -129,29 +154,63 @@ function Vo2maxCooperComponent(props) {
             {
                 showResultTable ? 
                 <div>
-                    <p className='calculator__text'>{gender === 'male' ? 'גברים' : 'נשים'}</p>
-                    <table border={'1px'}>
+                    <p className='calculator__text'>{gender === 'male' ? 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הגברים.' : 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הנשים.'}</p>
+                    <table className='calculator__table'>
                         <tbody>
                         <tr>
-                            <td rowSpan={2}>גיל</td>
-                            <td colSpan={5}>רמת כושר גופני</td>
+                            <td className='calculator__table__cell calculator__table__capture' rowSpan={2}>גיל</td>
+                            <td className='calculator__table__cell calculator__table__capture' colSpan={5}>רמת כושר גופני</td>
                         </tr>
                         <tr>
-                            <td>נמוכה מאוד</td>
-                            <td>נמוכה</td>
-                            <td>בינונית</td>
-                            <td>גבוהה</td>
-                            <td>גבוהה מאוד</td>
+                            <td className='calculator__table__cell calculator__table__capture'>נמוכה מאוד</td>
+                            <td className='calculator__table__cell calculator__table__capture'>נמוכה</td>
+                            <td className='calculator__table__cell calculator__table__capture'>בינונית</td>
+                            <td className='calculator__table__cell calculator__table__capture'>גבוהה</td>
+                            <td className='calculator__table__cell calculator__table__capture'>גבוהה מאוד</td>
                         </tr>
                         {
                             ageGroups.map((ageGroup, index) => (
                                 <tr key={index}>
-                                    <td>{ageGroup}</td>
-                                    <td id={`${ageGroup}_0`}>{dataTable[ageGroup][0]}</td>
-                                    <td id={`${ageGroup}_1`}>{dataTable[ageGroup][1]}</td>
-                                    <td id={`${ageGroup}_2`}>{dataTable[ageGroup][2]}</td>
-                                    <td id={`${ageGroup}_3`}>{dataTable[ageGroup][3]}</td>
-                                    <td id={`${ageGroup}_4`}>{dataTable[ageGroup][4]}</td>
+                                    <td 
+                                        className='calculator__table__cell calculator__table__capture'
+                                    >
+                                        {ageGroup.slice(0, 2)} - {Number(ageGroup.slice(0, 2)) + 9}
+                                    </td>
+                                    <td 
+                                        className='calculator__table__cell'
+                                        id={`${ageGroup}_0`} 
+                                        style={`${ageGroup}_0` === selectCellId ? {backgroundColor: '#ffa'} : {backgroundColor: 'transparent'}}
+                                    >
+                                        {dataTable[ageGroup][0]}
+                                    </td>
+                                    <td 
+                                        className='calculator__table__cell'
+                                        id={`${ageGroup}_1`} 
+                                        style={`${ageGroup}_1` === selectCellId ? {backgroundColor: '#ffa'} : {backgroundColor: 'transparent'}}
+                                    >
+                                        {dataTable[ageGroup][1]}
+                                    </td>
+                                    <td 
+                                        className='calculator__table__cell'
+                                        id={`${ageGroup}_2`} 
+                                        style={`${ageGroup}_2` === selectCellId ? {backgroundColor: '#ffa'} : {backgroundColor: 'transparent'}}
+                                    >
+                                        {dataTable[ageGroup][2]}
+                                    </td>
+                                    <td 
+                                        className='calculator__table__cell'
+                                        id={`${ageGroup}_3`} 
+                                        style={`${ageGroup}_3` === selectCellId ? {backgroundColor: '#ffa'} : {backgroundColor: 'transparent'}}
+                                    >
+                                        {dataTable[ageGroup][3]}
+                                    </td>
+                                    <td 
+                                        className='calculator__table__cell'
+                                        id={`${ageGroup}_4`} 
+                                        style={`${ageGroup}_4` === selectCellId ? {backgroundColor: '#ffa'} : {backgroundColor: 'transparent'}}
+                                    >
+                                        {dataTable[ageGroup][4]}
+                                    </td>
                                 </tr>
                             ))
                         }

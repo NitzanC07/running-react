@@ -32,3 +32,6 @@
 @import url('./components/Calculators/__form/__submit-button/calculator__form__submit-button.css');
 @import url('./components/Calculators/__form/__result/calculator__form__result.css');
 @import url('./components/Calculators/__form/__result/calculator__form__result-content.css');
+@import url('./components/Calculators/__table/calculator__table.css');
+@import url('./components/Calculators/__table/__capture/calculator__table__capture.css');
+@import url('./components/Calculators/__table/__cell/calculator__table__cell.css');
