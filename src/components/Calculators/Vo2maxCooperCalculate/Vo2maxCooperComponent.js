@@ -159,7 +159,7 @@ function Vo2maxCooperComponent(props) {
                         <tbody>
                         <tr>
                             <td className='calculator__table__cell calculator__table__capture' rowSpan={2}>גיל</td>
-                            <td className='calculator__table__cell calculator__table__capture' colSpan={5}>רמת כושר גופני</td>
+                            <td className='calculator__table__cell calculator__table__capture' colSpan={5}>רמת כושר גופני לפי ערכי VO<sub>2</sub> max</td>
                         </tr>
                         <tr>
                             <td className='calculator__table__cell calculator__table__capture'>נמוכה מאוד</td>
