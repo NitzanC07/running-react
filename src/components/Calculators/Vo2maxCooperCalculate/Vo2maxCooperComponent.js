@@ -31,7 +31,8 @@ function Vo2maxCooperComponent(props) {
         setSelectCellId('');
         for (let i = 0; i < ageGroups.length; i++) {
             const minAgeRange = Number(ageGroups[i].slice(0, 2))
-            if (age >= minAgeRange && age <= minAgeRange + 9) {
+            const maxAgeRange = Number(ageGroups[i].slice(3, 5))
+            if (age >= minAgeRange && age <= maxAgeRange) {
                 const relevantAgeGroup = dataTable[ageGroups[i]]
                 for (let j = 0; j < relevantAgeGroup.length; j++) {
                     if (relevantAgeGroup[j+1] && vo2maxResult[0] >= relevantAgeGroup[0]) {
@@ -162,11 +163,11 @@ function Vo2maxCooperComponent(props) {
                             <td className='calculator__table__cell calculator__table__capture' colSpan={5}>רמת כושר גופני לפי ערכי VO<sub>2</sub> max</td>
                         </tr>
                         <tr>
-                            <td className='calculator__table__cell calculator__table__capture'>נמוכה מאוד</td>
-                            <td className='calculator__table__cell calculator__table__capture'>נמוכה</td>
-                            <td className='calculator__table__cell calculator__table__capture'>בינונית</td>
-                            <td className='calculator__table__cell calculator__table__capture'>גבוהה</td>
-                            <td className='calculator__table__cell calculator__table__capture'>גבוהה מאוד</td>
+                            <td className='calculator__table__cell calculator__table__capture'>חלשה</td>
+                            <td className='calculator__table__cell calculator__table__capture'>מתחת לממוצע</td>
+                            <td className='calculator__table__cell calculator__table__capture'>ממוצעת</td>
+                            <td className='calculator__table__cell calculator__table__capture'>מעל לממוצע</td>
+                            <td className='calculator__table__cell calculator__table__capture'>מצויינת</td>
                         </tr>
                         {
                             ageGroups.map((ageGroup, index) => (
@@ -174,7 +175,7 @@ function Vo2maxCooperComponent(props) {
                                     <td 
                                         className='calculator__table__cell calculator__table__capture'
                                     >
-                                        {ageGroup.slice(0, 2)} - {Number(ageGroup.slice(0, 2)) + 9}
+                                        {ageGroup.slice(3, 5)} - {ageGroup.slice(0, 2)}
                                     </td>
                                     <td 
                                         className='calculator__table__cell'
