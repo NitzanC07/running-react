@@ -246,6 +246,15 @@ function Vo2maxCooperComponent(props) {
                         כמו כן, לרוב בדיקה זו תתבצע על ספורטאים מקצוענים או חובבי ספורט מיומנים, ולא נבצע בדיקה זו על
                         מאומנים מתחילים, או אנשים שיש להם בעיות בריאותיות שמגבילות להגיע למאמצים גבוהים. 
                     </p>
+                    <p className='calculator__text'>
+                        <b className='calculator__text_bold'>מקורות:</b>
+                        <ul className='calculator__text_list'>
+                            <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
+                            <li className='calculator__text_list-item'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
+                            <li className='calculator__text_list-item'>https://www.brianmac.co.uk/gentest.html</li>
+                        </ul>
+                        
+                    </p>
                 </div>
                 :
                 ""

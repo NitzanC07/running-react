@@ -10,6 +10,7 @@ function FatPercentageSkinfoldCalculate(props) {
     const [skinfoldWaist, setSkinfoldWaist] = useState(0);
     const [weight, setWeight] = useState(0);
     const [fpResult, setFpResult] = useState(0);
+    const [showTheory, setShowTheory] = useState(false);
     
     function calculateAndShowData(e) {
         e.preventDefault();
@@ -28,6 +29,14 @@ function FatPercentageSkinfoldCalculate(props) {
             setShowData(false);
         }
     }, [gender, age, weight, skinfoldWaist]);
+
+    function changeShowTheory() {
+        if (!showTheory) {
+            setShowTheory(true);
+        } else {
+            setShowTheory(false);
+        }
+    }
 
     return(
         <div className="main__content calculators" id="vo2maxCooperTest">
@@ -96,9 +105,28 @@ function FatPercentageSkinfoldCalculate(props) {
                     :
                         <p className="calculator__form__result-content">אנא וודא למלא את כל הפרטים ביחידות מידה הנדרשות. הנתונים צריכים להיות מספרים שלמים וגדולים מאפס.</p>
                 }
-                
                 </fieldset>
             </form>
+
+            <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
+            {
+                showTheory ? 
+                <div>
+                    <p className='calculator__text'>
+                        מה זה אחוז שומן? למה חשוב להכיר אותו? איך מחשבים אותו?
+                    </p>
+                    <p className='calculator__text'>
+                        <b className='calculator__text_bold'>מקורות:</b>
+                        <ul className='calculator__text_list'>
+                            <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
+                            <li className='calculator__text_list-item'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
+                            <li className='calculator__text_list-item'>https://www.calculator.net/body-fat-calculator.html</li>
+                        </ul>
+                    </p>
+                </div>
+                :
+                ""
+            }
         </div>
     )
 }

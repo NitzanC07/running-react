@@ -1,0 +1,7 @@
+.calculator__text_bold {
+    font-weight: 900;
+}
+
+.calculator__text_bold::selection {
+    background-color: #ffa;
+}
