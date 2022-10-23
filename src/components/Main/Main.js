@@ -7,6 +7,7 @@ import Vo2maxByHrComponent from '../Calculators/Vo2maxByHr/Vo2maxByHrComponent';
 import FatPercentageSkinfoldComponent from '../Calculators/FatPercentageSkinfoldCalculate/FatPercentageSkinfoldComponent';
 import FatPercentageComponent from '../Calculators/FatPercentageCalculate/FatPercentageComponent';
 import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
+import PaceCalculate from '../Calculators/PaceCalculate/PaceComponent';
 import TrainingPlans from '../TrainingPlans/TrainingPlans';
 import Bct from '../Bct/Bct';
 
@@ -55,6 +56,11 @@ function Main(props) {
           <Route 
             path='/calculators/bmi-calculate'
             element={<BmiComponent />}
+          />
+
+          <Route 
+            path='/calculators/pace-calculate'
+            element={<PaceCalculate />}
           />
 
           <Route 

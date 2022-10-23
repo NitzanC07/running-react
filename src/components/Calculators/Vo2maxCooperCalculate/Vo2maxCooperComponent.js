@@ -251,7 +251,7 @@ function Vo2maxCooperComponent(props) {
                         <ul className='calculator__text_list'>
                             <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
                             <li className='calculator__text_list-item'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
-                            <li className='calculator__text_list-item'>https://www.brianmac.co.uk/gentest.html</li>
+                            <li className='calculator__text_list-item'>Cooper VO<sub className='calculator__text_list-item'>2</sub> max Test, www.brianmac.co.uk</li>
                         </ul>
                         
                     </p>

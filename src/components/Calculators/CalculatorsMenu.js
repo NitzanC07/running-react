@@ -22,6 +22,11 @@ function CalculatorsMenu(props) {
                     </Link>
                 </li>
                 <li className="main__menu-item">
+                    <Link to={`/${props.id}/pace-calculate`}>
+                        <button type="button" className="main__menu-button main__menu-button_type_pace-calculate" id="pace-calculate">חישוב קצב מטרה</button>
+                    </Link>
+                </li>
+                <li className="main__menu-item">
                     <Link to={`/${props.id}/vo2max-cooper-calculate`}>
                         <button type="button" className="main__menu-button main__menu-button_type_vo2maxCooperCalculate" id="vo2maxCooperCalculate">חישוב צח"מ (לפי מבחן שדה)</button>
                     </Link>
