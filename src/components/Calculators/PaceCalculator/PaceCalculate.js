@@ -13,8 +13,6 @@ class PaceCalculator {
 
     _paceZones(pace) {
         const percentages = {'zone3': [1.2, 1.1, 1, 0.95, 0.80], 'zone4': [1.25, 1.15, 1.05, 1, 0.85], 'zone5': [1.45, 1.35, 1.25, 1.15, 1]};
-        const intense = this._intensity;
-        console.log(intense, percentages[this._intensity]);
         const zones = [];
         for (let z = 0; z < percentages[this._intensity].length; z++) {
             const zoneMins = Math.floor(((pace) * percentages[this._intensity][z]) / 1);
