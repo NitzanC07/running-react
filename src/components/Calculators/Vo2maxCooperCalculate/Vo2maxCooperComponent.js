@@ -61,7 +61,7 @@ function Vo2maxCooperComponent(props) {
         }
     }
 
-    function changeShowshowTheory() {
+    function changeShowTheory() {
         if (!showTheory) {
             setShowTheory(true);
         } else {
@@ -223,7 +223,7 @@ function Vo2maxCooperComponent(props) {
                 ""
             }
 
-            <h3 className='calculator__subtitle' onClick={changeShowshowTheory}>רקע תאורתי</h3>
+            <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
             {
                 showTheory ? 
                 <div>
@@ -246,15 +246,15 @@ function Vo2maxCooperComponent(props) {
                         כמו כן, לרוב בדיקה זו תתבצע על ספורטאים מקצוענים או חובבי ספורט מיומנים, ולא נבצע בדיקה זו על
                         מאומנים מתחילים, או אנשים שיש להם בעיות בריאותיות שמגבילות להגיע למאמצים גבוהים. 
                     </p>
-                    <p className='calculator__text'>
+                    <div className='calculator__text'>
                         <b className='calculator__text_bold'>מקורות:</b>
                         <ul className='calculator__text_list'>
                             <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
                             <li className='calculator__text_list-item'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
                             <li className='calculator__text_list-item'>Cooper VO<sub className='calculator__text_list-item'>2</sub> max Test, www.brianmac.co.uk</li>
                         </ul>
-                        
-                    </p>
+                    </div>
+                    
                 </div>
                 :
                 ""

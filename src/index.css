@@ -32,6 +32,8 @@
 @import url('./components/Calculators/__form/__data/calculator__form__data.css');
 @import url('./components/Calculators/__form/__data/calculator__form__data-label.css');
 @import url('./components/Calculators/__form/__input/calculator__form__input.css');
+@import url('./components/Calculators/__form/__input/_time-parts/calculator__form__input_time-parts.css');
+@import url('./components/Calculators/__form/__input/_time/calculator__form__input_time.css');
 @import url('./components/Calculators/__form/__submit-button/calculator__form__submit-button.css');
 @import url('./components/Calculators/__form/__result/calculator__form__result.css');
 @import url('./components/Calculators/__form/__result/calculator__form__result-content.css');
