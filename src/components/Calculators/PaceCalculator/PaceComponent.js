@@ -102,7 +102,7 @@ function PaceCalculate(props) {
             showData ?
             <fieldset  className="calculator__form__result">
                 <p className="calculator__form__result-content">מרחק: {distance} מטרים.</p>
-                <p className="calculator__form__result-content">קצב: {paceAndSpeed.pace} דקות לק"מ ({paceAndSpeed.speed} קמ"ש).</p>
+                
                 <p className="calculator__form__result-content">קצב לאימון שחרור / התאוששות: {paceAndSpeed.targets[0][0]} דקות לק"מ ({paceAndSpeed.targets[0][1]} קמ"ש).</p>
                 <p className="calculator__form__result-content">קצב לאימון אירובי קל: {paceAndSpeed.targets[1][0]} דקות לק"מ ({paceAndSpeed.targets[1][1]} קמ"ש).</p>
                 <p className="calculator__form__result-content">קצב לאימון אירובי טמפו: {paceAndSpeed.targets[2][0]} דקות לק"מ ({paceAndSpeed.targets[2][1]} קמ"ש).</p>
