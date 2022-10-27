@@ -61,7 +61,7 @@ function PaceCalculate(props) {
                     type="number" 
                     id="seconds" 
                     placeholder={0} 
-                    value={seconds <= 0 ? seconds * 0 : seconds > 59 ? seconds % 60 : seconds}
+                    value={seconds <= 0 ? '' : seconds > 59 ? seconds % 60 : seconds}
                     onChange={(e) => setSeconds(e.target.value)}
                     />:
                     <input
@@ -69,7 +69,7 @@ function PaceCalculate(props) {
                     type="number" 
                     id="minutes" 
                     placeholder={0} 
-                    value={minutes <= 0 ? minutes * 0 : minutes}
+                    value={minutes <= 0 ? '' : minutes}
                     onChange={(e) => setMinutes(e.target.value)}
                     />:
                     <input
@@ -77,7 +77,7 @@ function PaceCalculate(props) {
                     type="number" 
                     id="hours" 
                     placeholder={0} 
-                    value={hours <= 0 ? hours * 0 : hours}
+                    value={hours <= 0 ? '' : hours}
                     onChange={(e) => setHours(e.target.value)}
                     />
                 </div>

@@ -70,7 +70,27 @@ function Main(props) {
 
           <Route 
             path='/bct'
-            element={<Bct />}
+            element={<Bct id="bct" />}
+          />
+
+          <Route 
+            path='/bct/coordination-test1'
+            element={<Bct id="bct" />}
+          />
+
+          <Route 
+            path='/bct/coordination-test2'
+            element={<Bct id="bct" />}
+          />
+
+          <Route 
+            path='/bct/coordination-test3'
+            element={<Bct id="bct" />}
+          />
+
+          <Route 
+            path='/bct/coordination-test4'
+            element={<Bct id="bct" />}
           />
 
         </Routes>
