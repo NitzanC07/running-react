@@ -1,5 +1,6 @@
-# Personal project Sport & Healthy
-SPA (Single Page Application) for [Nitzan Cohen Running Trainer](https://nitzanc07.github.io/Running-react/) project
+# Sport & Healthy calculators
+This is amy personal project that I made as a personal trainer. I made a SPA (Single Page Application) with variety calculators of some fitness field.\
+The direct link to the project: [Nitzan Cohen Running Trainer](https://nitzanc07.github.io/Running-react/).
 
 ## About the project
 I made this project to train on my new skills of front end technologies with my proffesional knowledge about sport and healty. I created calculators for calculate measurements of healthy and fitness. The project contain calculators like BMI, fat percentage, VO2-max and heart rate targets for a trainning. In the soon future I plan to add to this project another tools of fitness like coordination test and training plans.
