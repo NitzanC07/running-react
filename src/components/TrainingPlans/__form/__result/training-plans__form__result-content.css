@@ -1,0 +1,11 @@
+.training-plans__form__result-content {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.training-plans__form__result-content::selection {
+    background-color: #ffa;
+}

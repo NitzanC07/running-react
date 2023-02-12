@@ -1,0 +1,28 @@
+.training-plans__form__submit-button {
+    width: 50%;
+    height: 40px;
+    background-color: #ffa;
+    border: 1px solid rgba(100, 0, 0, 1);
+    border-radius: 7px;
+    color: rgba(100, 0, 0, 1);
+    box-shadow: 5px 5px 10px #aaa;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 25px auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+.training-plans__form__submit-button:hover{
+    background-color: rgba(100, 0, 0, 1);
+    box-shadow: 1px 1px 5px #aaa;
+    border-color: #ffa;
+    color: #ffa;
+}
+
+@media screen and (max-width: 880px){
+    .training-plans__form__submit-button {
+        width: 95%;
+    }    
+}

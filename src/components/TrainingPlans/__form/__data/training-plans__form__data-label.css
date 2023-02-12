@@ -1,0 +1,9 @@
+.training-plans__form__data-label {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.training-plans__form__data-label::selection {
+    background-color: #ffa;
+}

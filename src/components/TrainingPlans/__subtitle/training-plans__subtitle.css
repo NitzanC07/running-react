@@ -1,0 +1,19 @@
+.training-plans__subtitle {
+    font-family: 'Rubik-bold', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 30px 25px 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.training-plans__subtitle::selection {
+    background-color: #ffa;
+}
+
+@media screen and (max-width: 400px) {
+    .training-plans__subtitle {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

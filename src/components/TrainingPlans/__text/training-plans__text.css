@@ -1,4 +1,4 @@
-.calculator__text {
+.training-plans__text {
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.5;
@@ -8,12 +8,12 @@
     padding: 0;
 }
 
-.calculator__text::selection {
+.training-plans__text::selection {
     background-color: #ffa;
 }
 
 @media screen and (max-width: 400px) {
-    .calculator__text {
+    .training-plans__text {
         font-size: 16px;
         line-height: 18px;
     }

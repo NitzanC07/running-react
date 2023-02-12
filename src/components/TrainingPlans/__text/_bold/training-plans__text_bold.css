@@ -1,0 +1,7 @@
+.training-plans__text_bold {
+    font-weight: 900;
+}
+
+.training-plans__text_bold::selection {
+    background-color: #ffa;
+}

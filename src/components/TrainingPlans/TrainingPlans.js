@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SecondaryMenu from "../SecondaryMenu/SecondaryMenu";
 
 function TrainingPlans(props) {
@@ -6,13 +7,21 @@ function TrainingPlans(props) {
 
             <SecondaryMenu 
                 page="training-plans"
-                name="תוכניות אימון"
+                name="תוכניות וכלי אימון"
             />
 
-            <h2 className="main__title">תוכניות אימון</h2>
+            <h2 className="main__title">תוכניות וכלי אימון</h2>
             <p className="main__description">
-                תוכניות אימון מהצעד הראשון ועד רצים מיומנים.
+                תוכניות אימון וכלי טכנולוגיים למהלך האימון ומעקב אחר תוצאות.
             </p>
+
+            <ul className="main__menu-list">
+                <li className="main__menu-item">
+                    <Link to={`/${props.id}/running-timer`}>
+                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">שעון עצר לריצה</button>
+                    </Link>
+                </li>
+            </ul>
 
         </section>
     )
