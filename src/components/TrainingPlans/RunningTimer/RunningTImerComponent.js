@@ -52,7 +52,7 @@ function RunningTimerComponent(props) {
                         page="training-plans"
                         name="תוכניות וכלי אימון"
                     />
-                    <h2 className="training-plans__title">שעון עצר לריצה</h2>
+                    <h2 className="training-plans__title">אימון הפוגות</h2>
 
                     <form className='training-plans__form' onSubmit={runningTimerFunc}>
 
@@ -117,7 +117,7 @@ function RunningTimerComponent(props) {
                             type='submit'
                             onClick={runningTimerFunc}
                         >
-                            הפעלת שעון עצר
+                            התחל אימון הפוגות
                         </button>
 
                         

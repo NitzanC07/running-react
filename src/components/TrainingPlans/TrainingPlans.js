@@ -18,7 +18,7 @@ function TrainingPlans(props) {
             <ul className="main__menu-list">
                 <li className="main__menu-item">
                     <Link to={`/${props.id}/running-timer`}>
-                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">שעון עצר לריצה</button>
+                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">אימון הפוגות</button>
                     </Link>
                 </li>
             </ul>
