@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Running-react/static/css/main.9043abd4.css",
-    "main.js": "/Running-react/static/js/main.9b09d5de.js",
-    "static/js/787.183064c6.chunk.js": "/Running-react/static/js/787.183064c6.chunk.js",
-    "static/media/nitzan-black-and-white-01.jpg": "/Running-react/static/media/nitzan-black-and-white-01.8e07f3ac40f4ca4fde6d.jpg",
-    "static/media/Rubik-Regular.ttf": "/Running-react/static/media/Rubik-Regular.da39336cfcac7980f2f1.ttf",
-    "static/media/Rubik-Bold.ttf": "/Running-react/static/media/Rubik-Bold.383b8c94b12034c5e8b5.ttf",
-    "static/media/LongLogo2.png": "/Running-react/static/media/LongLogo2.4bc7190d61a0243be8c5.png",
-    "static/media/logoGIF.png": "/Running-react/static/media/logoGIF.fed83bd93566178edfa1.png",
-    "static/media/yehudaclm-light-webfont.woff": "/Running-react/static/media/yehudaclm-light-webfont.f16efcf8f9fb56765f7e.woff",
-    "index.html": "/Running-react/index.html",
-    "main.9043abd4.css.map": "/Running-react/static/css/main.9043abd4.css.map",
-    "main.9b09d5de.js.map": "/Running-react/static/js/main.9b09d5de.js.map",
-    "787.183064c6.chunk.js.map": "/Running-react/static/js/787.183064c6.chunk.js.map"
+    "main.css": "/running-react/static/css/main.c191972a.css",
+    "main.js": "/running-react/static/js/main.bcc027c0.js",
+    "static/js/787.183064c6.chunk.js": "/running-react/static/js/787.183064c6.chunk.js",
+    "static/media/nitzan-black-and-white-01.jpg": "/running-react/static/media/nitzan-black-and-white-01.8e07f3ac40f4ca4fde6d.jpg",
+    "static/media/Rubik-Regular.ttf": "/running-react/static/media/Rubik-Regular.da39336cfcac7980f2f1.ttf",
+    "static/media/Rubik-Bold.ttf": "/running-react/static/media/Rubik-Bold.383b8c94b12034c5e8b5.ttf",
+    "static/media/LongLogo2.png": "/running-react/static/media/LongLogo2.4bc7190d61a0243be8c5.png",
+    "static/media/logoGIF.png": "/running-react/static/media/logoGIF.fed83bd93566178edfa1.png",
+    "static/media/yehudaclm-light-webfont.woff": "/running-react/static/media/yehudaclm-light-webfont.f16efcf8f9fb56765f7e.woff",
+    "index.html": "/running-react/index.html",
+    "main.c191972a.css.map": "/running-react/static/css/main.c191972a.css.map",
+    "main.bcc027c0.js.map": "/running-react/static/js/main.bcc027c0.js.map",
+    "787.183064c6.chunk.js.map": "/running-react/static/js/787.183064c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9043abd4.css",
-    "static/js/main.9b09d5de.js"
+    "static/css/main.c191972a.css",
+    "static/js/main.bcc027c0.js"
   ]
 }
