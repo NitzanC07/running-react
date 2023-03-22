@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Vo2maxCooperCalculate from './Vo2maxCooperCalculate';
+import vo2maxCooperCalculate from './vo2maxCooperCalculate';
 import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
 
 function Vo2maxCooperComponent(props) {
@@ -18,7 +18,7 @@ function Vo2maxCooperComponent(props) {
     
     useEffect(() => {
         if (weight > 0 && distance > 0 && age > 0) {
-            const vo2maxCooperCalculateInastance = new Vo2maxCooperCalculate(distance, weight, gender, age);        
+            const vo2maxCooperCalculateInastance = new vo2maxCooperCalculate(distance, weight, gender, age);        
             setVo2maxResult(vo2maxCooperCalculateInastance.compute());
             setDataTable(vo2maxCooperCalculateInastance.dataTables());
         } else {
