@@ -14,7 +14,6 @@ function RunningTimer(props) {
         }, 1000)
 
         if (intervalTime === 0) {
-            // console.log(`Interval paused for ${props.data.restTime*1000} miliseconds.\nLeft more ${repeatitions} reps.`);
             clearInterval(timer1);
             setIntervalTime(props.data.intervalTime)
             setIntervalTimerActive(false);
@@ -48,7 +47,9 @@ function RunningTimer(props) {
                     </>
                     }
             
-                <p className="running-timer__title">נשארו עוד חזרות: {repeatitions}</p>
+                <p className="running-timer__title">
+                    {repeatitions === 1 ? `חזרה אחרונה!` : `נשארו עוד ${repeatitions} חזרות.`}
+                </p>
             </> : 
             <p className="running-timer__title">כל הכבוד!</p>
             }
