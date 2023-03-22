@@ -10,7 +10,7 @@ import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
 import PaceCalculate from '../Calculators/PaceCalculator/PaceComponent';
 import TrainingPlans from '../TrainingPlans/TrainingPlans';
 import Bct from '../Bct/Bct';
-import RunningTimer from '../TrainingPlans/RunningTimer/RunningTImerComponent';
+import RunningTimerComponent from '../TrainingPlans/RunningTimer/RunningTImerComponent';
 
 function Main(props) {
 
@@ -71,7 +71,7 @@ function Main(props) {
 
           <Route 
             path='/training-plans/running-timer'
-            element={<RunningTimer />}
+            element={<RunningTimerComponent />}
           />
 
           <Route 

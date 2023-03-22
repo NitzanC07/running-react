@@ -40,3 +40,5 @@
 @import url('./components/Calculators/__table/calculator__table.css');
 @import url('./components/Calculators/__table/__capture/calculator__table__capture.css');
 @import url('./components/Calculators/__table/__cell/calculator__table__cell.css');
+
+@import url('./components/TrainingPlans/RunningTimer/running-timer.css');
