@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Vo2maxCooperCalculate from './vo2maxCooperCalculate';
+import Vo2maxCooperCalculate from './Vo2maxCooperCalculate';
 import SecondaryMenu from '../../SecondaryMenu/SecondaryMenu';
 
 function Vo2maxCooperComponent(props) {
