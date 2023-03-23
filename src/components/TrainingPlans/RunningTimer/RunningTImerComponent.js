@@ -63,8 +63,8 @@ function RunningTimerComponent(props) {
                                 className='training-plans__form__input training-plans__form__input_time' 
                                 type="number" 
                                 id="seconds-run" 
-                                placeholder={0} 
-                                value={secondsRun <= 0 ? 0 : secondsRun > 59 ? secondsRun % 60 : secondsRun}
+                                placeholder='0'
+                                value={secondsRun <= 0 ? '' : secondsRun > 59 ? secondsRun % 60 : secondsRun}
                                 onChange={(e) => setSecondsRun(e.target.value)}
                                 />:
                                 <input
@@ -72,7 +72,7 @@ function RunningTimerComponent(props) {
                                 type="number" 
                                 id="minutes-run" 
                                 placeholder={0} 
-                                value={minutesRun <= 0 ? 0 : minutesRun}
+                                value={minutesRun <= 0 ? '' : minutesRun}
                                 onChange={(e) => setMinutesRun(e.target.value)}
                                 />
                             </div>
@@ -85,16 +85,16 @@ function RunningTimerComponent(props) {
                                     className='training-plans__form__input training-plans__form__input_time' 
                                     type="number" 
                                     id="secondsRest" 
-                                    placeholder={0} 
-                                    value={secondsRest <= 0 ? 0 : secondsRest > 59 ? secondsRest % 60 : secondsRest}
+                                    placeholder='0'
+                                    value={secondsRest <= 0 ? '' : secondsRest > 59 ? secondsRest % 60 : secondsRest}
                                     onChange={(e) => setSecondsRest(e.target.value)}
                                 />:
                                 <input
                                     className='training-plans__form__input training-plans__form__input_time' 
                                     type="number" 
                                     id="minutes-rest" 
-                                    placeholder={0} 
-                                    value={minutesRest <= 0 ? 0 : minutesRest}
+                                    placeholder='0' 
+                                    value={minutesRest <= 0 ? '' : minutesRest}
                                     onChange={(e) => setMinutesRest(e.target.value)}
                                 />
                             </div>
@@ -106,8 +106,8 @@ function RunningTimerComponent(props) {
                             className='calculator__form__input' 
                             type="number" 
                             id="repeatitions" 
-                            placeholder="0" 
-                            value={repeatitions > 0 ? repeatitions : ""}
+                            placeholder='0' 
+                            value={repeatitions > 0 ? repeatitions : ''}
                             onChange={(e) => setRepeatitions(e.target.value)}
                             />
                         </fieldset>

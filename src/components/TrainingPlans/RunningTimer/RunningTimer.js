@@ -32,7 +32,7 @@ function RunningTimer(props) {
     }, [intervalTime, intervalTimerActive, repeatitions, props.data.restTime, props.data.intervalTime])
 
     return (
-        <section className="running-timer">
+        <section className="running-timer" style={intervalTimerActive ? {'backgroundColor': '#8f8'} : {'backgroundColor': '#ff8'}}>
             {repeatitions > 0 ? 
             <>
                 {
@@ -51,7 +51,15 @@ function RunningTimer(props) {
                     {repeatitions === 1 ? `חזרה אחרונה!` : `נשארו עוד ${repeatitions} חזרות.`}
                 </p>
             </> : 
-            <p className="running-timer__title">כל הכבוד!</p>
+            <>
+                <p className="running-timer__title">כל הכבוד!</p>
+                <div className="running-timer__block">
+                    <p className="running-timer__text">סיימת אימון הפוגות</p>
+                    <p className="running-timer__text">
+                        השלמת בהצלחה {props.data.repeatition} חזרות של {`${Math.floor(props.data.intervalTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.intervalTime%60)}`.padStart(2, '0')} דקות ריצה ו-{`${Math.floor(props.data.restTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.restTime%60)}`.padStart(2, '0')} דקות התאוששות.
+                    </p>
+                </div>
+            </>
             }
             
             <button
