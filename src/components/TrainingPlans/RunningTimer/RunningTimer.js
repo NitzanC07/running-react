@@ -56,7 +56,7 @@ function RunningTimer(props) {
                 <div className="running-timer__block">
                     <p className="running-timer__text">סיימת אימון הפוגות</p>
                     <p className="running-timer__text">
-                        השלמת בהצלחה {props.data.repeatition} חזרות של {`${Math.floor(props.data.intervalTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.intervalTime%60)}`.padStart(2, '0')} דקות ריצה ו-{`${Math.floor(props.data.restTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.restTime%60)}`.padStart(2, '0')} דקות התאוששות.
+                        השלמת בהצלחה {props.data.repeatitions} חזרות של {`${Math.floor(props.data.intervalTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.intervalTime%60)}`.padStart(2, '0')} דקות ריצה ו-{`${Math.floor(props.data.restTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.restTime%60)}`.padStart(2, '0')} דקות התאוששות.
                     </p>
                 </div>
             </>
