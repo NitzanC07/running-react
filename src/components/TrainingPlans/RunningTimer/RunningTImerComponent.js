@@ -27,6 +27,7 @@ function RunningTimerComponent(props) {
     const [secondsRest, setSecondsRest] = useState(0);
     const [minutesRest, setMinutesRest] = useState(0);
     const [repeatitions, setRepeatitions] = useState(0);
+    const [name, setName] = useState('');
     const [data, setData] = useState({});
     const [showTimer, setShowTimer] = useState(false);
     const [showTheory, setShowTheory] = useState(false);
@@ -37,7 +38,8 @@ function RunningTimerComponent(props) {
         setData({
             intervalTime: Number(secondsRun) + Number(minutesRun*60),
             restTime: Number(secondsRest) + Number(minutesRest*60),
-            repeatitions: Number(repeatitions)
+            repeatitions: Number(repeatitions),
+            name
         })
     }
 
@@ -64,6 +66,20 @@ function RunningTimerComponent(props) {
                     <h2 className="training-plans__title">אימון הפוגות</h2>
 
                     <form className='training-plans__form' onSubmit={runningTimerFunc}>
+
+                    <fieldset className='training-plans__form__data'>
+                        <label className="training-plans__form__data-label">שם פרטי:</label>
+                            <div className='training-plans__form__input training-plans__form__input_time-parts'>
+                                <input
+                                className='training-plans__form__input training-plans__form__input_time' 
+                                type="string" 
+                                id="name" 
+                                placeholder='מה שמך?'
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                />
+                            </div>
+                        </fieldset>
 
                         <fieldset className='training-plans__form__data'>
                         <label className="training-plans__form__data-label">זמן ריצה (mm:ss):</label>

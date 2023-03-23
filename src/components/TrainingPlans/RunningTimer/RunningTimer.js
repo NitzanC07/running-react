@@ -26,6 +26,7 @@ function RunningTimer(props) {
 
         if (repeatitions === 0) {
             clearInterval(timer1);
+            setIntervalTimerActive(false)
         }
         
         return () => clearInterval(timer1);
@@ -52,9 +53,9 @@ function RunningTimer(props) {
                 </p>
             </> : 
             <>
-                <p className="running-timer__title">כל הכבוד!</p>
+                <p className="running-timer__title">{props.data.name}, כל הכבוד!</p>
                 <div className="running-timer__block">
-                    <p className="running-timer__text">סיימת אימון הפוגות</p>
+                    <p className="running-timer__text">סיימת עוד אימון הפוגות</p>
                     <p className="running-timer__text">
                         השלמת בהצלחה {props.data.repeatitions} חזרות של {`${Math.floor(props.data.intervalTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.intervalTime%60)}`.padStart(2, '0')} דקות ריצה ו-{`${Math.floor(props.data.restTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.restTime%60)}`.padStart(2, '0')} דקות התאוששות.
                     </p>
