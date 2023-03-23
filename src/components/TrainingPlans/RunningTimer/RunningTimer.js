@@ -32,7 +32,7 @@ function RunningTimer(props) {
     }, [intervalTime, intervalTimerActive, repeatitions, props.data.restTime, props.data.intervalTime])
 
     return (
-        <section className="running-timer" style={intervalTimerActive ? {'backgroundColor': '#8f8'} : {'backgroundColor': '#ff8'}}>
+        <section className="running-timer" style={intervalTimerActive ? {'backgroundColor': '#2f2'} : {'backgroundColor': '#ff8'}}>
             {repeatitions > 0 ? 
             <>
                 {
@@ -57,6 +57,9 @@ function RunningTimer(props) {
                     <p className="running-timer__text">סיימת אימון הפוגות</p>
                     <p className="running-timer__text">
                         השלמת בהצלחה {props.data.repeatitions} חזרות של {`${Math.floor(props.data.intervalTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.intervalTime%60)}`.padStart(2, '0')} דקות ריצה ו-{`${Math.floor(props.data.restTime/60)}`.padStart(2, '0')}:{`${Math.floor(props.data.restTime%60)}`.padStart(2, '0')} דקות התאוששות.
+                    </p>
+                    <p className="running-timer__text">
+                        בסך-הכל רצת {Math.floor(((props.data.intervalTime+props.data.restTime)*props.data.repeatitions)/60)}:{((props.data.intervalTime+props.data.restTime)*props.data.repeatitions)%60} דקות.
                     </p>
                 </div>
             </>
