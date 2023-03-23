@@ -153,7 +153,7 @@ function Vo2maxCooperComponent(props) {
 
             <h3 className='calculator__subtitle' onClick={changeShowResultTable}>שקלול התוצאה</h3>
             {
-                showResultTable ? 
+                showResultTable && 
                 <div>
                     <p className='calculator__text'>{gender === 'male' ? 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הגברים.' : 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הנשים.'}</p>
                     <table className='calculator__table'>
@@ -215,17 +215,14 @@ function Vo2maxCooperComponent(props) {
                                 </tr>
                             ))
                         }
-                        
                         </tbody>
                     </table>
                 </div>
-                :
-                ""
             }
 
             <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
             {
-                showTheory ? 
+                showTheory && 
                 <div>
                     <p className='calculator__text'>
                         התהליך האירובי מחייב כמות של כ-3.5 מ"ל חמצן לכל 1 ק"ג גוף לדקה במצב מנוחה. 
@@ -256,8 +253,6 @@ function Vo2maxCooperComponent(props) {
                     </div>
                     
                 </div>
-                :
-                ""
             }
         </div>
     )
