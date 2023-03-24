@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="app">
       <div className="app__container">
-     
+    
         <Header />
 
         <Main />

@@ -19,8 +19,11 @@ import '../__form/__submit-button/training-plans__form__submit-button.css';
 import SecondaryMenu from "../../SecondaryMenu/SecondaryMenu";
 import RunningTimer from './RunningTimer';
 import { useState } from 'react';
+import nosleep from 'nosleep.js';
 
 function RunningTimerComponent(props) {
+
+    const noSleep = new nosleep();
 
     const [secondsRun, setSecondsRun] = useState(0);
     const [minutesRun, setMinutesRun] = useState(0);
@@ -34,13 +37,29 @@ function RunningTimerComponent(props) {
 
     const runningTimerFunc = (e) => {
         e.preventDefault();
-        setShowTimer(true);
+        // Enable wake lock.
+        // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+        document.addEventListener('click', function enableNoSleep() {
+            document.removeEventListener('click', enableNoSleep, false);
+            noSleep.enable();
+        }, false);
+
         setData({
             intervalTime: Number(secondsRun) + Number(minutesRun*60),
             restTime: Number(secondsRest) + Number(minutesRest*60),
             repeatitions: Number(repeatitions),
             name
         })
+        handleShowTimer();
+    }
+
+    function handleShowTimer() {
+        if (!showTimer) {
+            setShowTimer(true)
+        } else {
+            setShowTimer(false);
+            noSleep.disable();
+        }
     }
 
     function changeShowTheory() {
@@ -56,7 +75,7 @@ function RunningTimerComponent(props) {
             { showTimer ?
                 <RunningTimer 
                     data={data}
-                    handleShowTimer={setShowTimer}
+                    handleShowTimer={handleShowTimer}
                 /> :
                 <>
                     <SecondaryMenu

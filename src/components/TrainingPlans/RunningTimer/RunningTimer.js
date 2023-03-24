@@ -26,11 +26,11 @@ function RunningTimer(props) {
 
         if (repeatitions === 0) {
             clearInterval(timer1);
-            setIntervalTimerActive(false)
+            setIntervalTimerActive(false);
         }
         
         return () => clearInterval(timer1);
-    }, [intervalTime, intervalTimerActive, repeatitions, props.data.restTime, props.data.intervalTime])
+    }, [intervalTime, intervalTimerActive, repeatitions, props.data.restTime, props.data.intervalTime, props])
 
     return (
         <section className="running-timer" style={intervalTimerActive ? {'backgroundColor': '#2f2'} : {'backgroundColor': '#ff8'}}>
@@ -67,7 +67,7 @@ function RunningTimer(props) {
             }
             
             <button
-                onClick={() => props.handleShowTimer(false)}
+                onClick={() => props.handleShowTimer()}
                 className="running-timer__button"
             >
                 סגור
