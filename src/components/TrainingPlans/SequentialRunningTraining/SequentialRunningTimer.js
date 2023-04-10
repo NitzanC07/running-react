@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import RunningProgressBar from "../RunningProgressBar/RunningProgressBar";
 
 function SequentialRunningTimer(props) {
     // console.log(props);
@@ -17,7 +18,7 @@ function SequentialRunningTimer(props) {
             runningTimerActive && setRunningTime((prevRunningTime) => prevRunningTime+1, 1000);
         }, 1000)
 
-        setRunningProgress(roundNumber((runningTime / props.data.runningTime), 2));
+        setRunningProgress(roundNumber((runningTime*100 / props.data.runningTime), 0));
 
         if (runningTime === props.data.runningTime) {
             clearInterval(timer1);
@@ -36,7 +37,9 @@ function SequentialRunningTimer(props) {
                     <>
                         <p className="running-timer__title">ריצה</p>
                         <p className="running-timer__time">{`${Math.floor(runningTime/60)}`.padStart(2, '0')}:{`${runningTime%60}`.padStart(2, 0)}</p> 
-                        <p className="running-timer__text">{runningProgress *100}%</p>
+                        <RunningProgressBar 
+                             progress={runningProgress}
+                        />
                     </> 
                 }
             </> : 
