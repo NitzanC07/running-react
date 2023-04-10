@@ -10,7 +10,8 @@ import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
 import PaceCalculate from '../Calculators/PaceCalculator/PaceComponent';
 import TrainingPlans from '../TrainingPlans/TrainingPlans';
 import Bct from '../Bct/Bct';
-import RunningTimerComponent from '../TrainingPlans/RunningTimer/RunningTImerComponent';
+import IntervalRunningTraining from '../TrainingPlans/RunningTimer/IntervalRunningTraining';
+import PageNotFound from '../PageNotFound/PageNotFound';
 
 function Main(props) {
 
@@ -70,8 +71,8 @@ function Main(props) {
           />
 
           <Route 
-            path='/training-plans/running-timer'
-            element={<RunningTimerComponent />}
+            path='/training-plans/intervals-running'
+            element={<IntervalRunningTraining />}
           />
 
           <Route 
@@ -79,7 +80,7 @@ function Main(props) {
             element={<Bct id="bct" />}
           />
 
-          <Route 
+          {/* <Route 
             path='/bct/coordination-test1'
             element={<Bct id="bct" />}
           />
@@ -97,6 +98,11 @@ function Main(props) {
           <Route 
             path='/bct/coordination-test4'
             element={<Bct id="bct" />}
+          /> */}
+
+          <Route
+            path='*'
+            element={<PageNotFound />}
           />
 
         </Routes>

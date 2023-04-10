@@ -21,7 +21,7 @@ import RunningTimer from './RunningTimer';
 import { useState } from 'react';
 import nosleep from 'nosleep.js';
 
-function RunningTimerComponent(props) {
+function IntervalRunningTraining(props) {
 
     const noSleep = new nosleep();
 
@@ -221,4 +221,4 @@ function RunningTimerComponent(props) {
     )
 }
 
-export default RunningTimerComponent;
+export default IntervalRunningTraining;
