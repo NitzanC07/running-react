@@ -17,8 +17,13 @@ function TrainingPlans(props) {
 
             <ul className="main__menu-list">
                 <li className="main__menu-item">
+                    <Link to={`/${props.id}/sequential-running`}>
+                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">אימון ריצת רצף</button>
+                    </Link>
+                </li>
+                <li className="main__menu-item">
                     <Link to={`/${props.id}/intervals-running`}>
-                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">אימון הפוגות</button>
+                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">אימון ריצת הפוגות</button>
                     </Link>
                 </li>
             </ul>
