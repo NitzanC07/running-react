@@ -10,7 +10,7 @@ import BmiComponent from '../Calculators/BmiCalculate/BmiComponent';
 import PaceCalculate from '../Calculators/PaceCalculator/PaceComponent';
 import TrainingPlans from '../TrainingPlans/TrainingPlans';
 import Bct from '../Bct/Bct';
-import IntervalRunningTraining from '../TrainingPlans/RunningTimer/IntervalRunningTraining';
+import IntervalRunningTraining from '../TrainingPlans/IntervalsRunningTraining/IntervalRunningTraining';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
 function Main(props) {
