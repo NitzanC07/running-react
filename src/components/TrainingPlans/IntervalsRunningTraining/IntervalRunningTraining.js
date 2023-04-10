@@ -17,7 +17,7 @@ import '../__form/__result/training-plans__form__result.css';
 import '../__form/__result/training-plans__form__result-content.css';
 import '../__form/__submit-button/training-plans__form__submit-button.css';
 import SecondaryMenu from "../../SecondaryMenu/SecondaryMenu";
-import RunningTimer from './RunningTimer';
+import RunningTimer from './IntervalsRunningTimer';
 import { useState } from 'react';
 import nosleep from 'nosleep.js';
 

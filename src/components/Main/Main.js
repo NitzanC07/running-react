@@ -12,6 +12,7 @@ import TrainingPlans from '../TrainingPlans/TrainingPlans';
 import Bct from '../Bct/Bct';
 import IntervalRunningTraining from '../TrainingPlans/IntervalsRunningTraining/IntervalRunningTraining';
 import PageNotFound from '../PageNotFound/PageNotFound';
+import SequentialRunningTraining from '../TrainingPlans/SequentialRunningTraining/SequentialRunningTraining';
 
 function Main(props) {
 
@@ -73,6 +74,11 @@ function Main(props) {
           <Route 
             path='/training-plans/intervals-running'
             element={<IntervalRunningTraining />}
+          />
+
+          <Route 
+            path='/training-plans/sequential-running'
+            element={<SequentialRunningTraining />}
           />
 
           <Route 
