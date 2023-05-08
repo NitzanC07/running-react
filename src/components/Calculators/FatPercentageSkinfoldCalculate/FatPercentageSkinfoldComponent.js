@@ -109,6 +109,7 @@ function FatPercentageSkinfoldCalculate(props) {
             </form>
 
             <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
+            <section className="text__inforamtive-session">
             {
                 showTheory ? 
                 <div>
@@ -127,6 +128,7 @@ function FatPercentageSkinfoldCalculate(props) {
                 :
                 ""
             }
+            </section>
         </div>
     )
 }

@@ -107,8 +107,8 @@ function SequentialRunningTraining(props) {
                             התחל אימון רצף
                         </button>
                     </form>
-
                     <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
+                    <section className="text__inforamtive-session">
                         {
                             showTheory && 
                             <div>
@@ -133,13 +133,13 @@ function SequentialRunningTraining(props) {
                                     (טמפו), והסוג השלישי הוא אימון פַרְטְלֵק (Fartlek).
                                 </p>
                                 <p className='calculator__text'>
-                                <b className='calculator__text'>אימון רצף נרחב -</b>מהליכה ועד אולטרא מרתון. בקרוב...
+                                <b className='calculator__text'>אימון רצף נרחב -</b> מהליכה ועד אולטרא מרתון. בקרוב...
                                 </p>
                                 <p className='calculator__text'>
-                                <b className='calculator__text'>אימון רצף עצים (טמפו) -</b>מרחקים בינוניים בקצב כמעט אנאירובי. בקרוב...
+                                <b className='calculator__text'>אימון רצף עצים (טמפו) -</b> מרחקים בינוניים בקצב כמעט אנאירובי. בקרוב...
                                 </p>
                                 <p className='calculator__text'>
-                                <b className='calculator__text'>אימון פַרְטְלֵק (Fartlek) -</b>זו היא שיטת אימון רצף משתנה שהומצאה בשוודיה 
+                                <b className='calculator__text'>אימון פַרְטְלֵק (Fartlek) -</b> זו היא שיטת אימון רצף משתנה שהומצאה בשוודיה 
                                 על-ידי מאמן בשם גוסטה הולמר בשנות ה-30 של המאה העשרים. המילה פַרְטְלֵק, מקורה בשוודית, והיא הלחם של שתי
                                 מילים Fart = מהירות, ו-Lek = משחק בשוודית, כלומר משחקי מהירות, או משחקי קצב. מטרתה של שיטת אימון זו
                                 היא להרגיל את הגוף לרוץ במהירויות משתנות תוך שמירה על ריצה ממושכת והתאוששות אקטיבית תוך כדי ריצה.
@@ -162,6 +162,7 @@ function SequentialRunningTraining(props) {
                                 
                             </div>
                         }
+                    </section>
                 </>
             }
         </div>

@@ -166,6 +166,7 @@ function IntervalRunningTraining(props) {
                     </form>
 
                     <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
+                    <section className='text__inforamtive-session'>
                         {
                             showTheory && 
                             <div>
@@ -182,7 +183,7 @@ function IntervalRunningTraining(props) {
                                     עצימות ואימון הפוגות נרחבות.
                                 </p>
                                 <p className='calculator__text'>
-                                    <b className='calculator__text'>אימון הפוגות עצימות -</b>הוא אימון שמתאפיין בריצת מקטעים קצרים (בזמן או במרחק)
+                                    <b className='calculator__text'>אימון הפוגות עצימות -</b> הוא אימון שמתאפיין בריצת מקטעים קצרים (בזמן או במרחק)
                                     ובדופק גבוה, מעל הסף האנאירובי, עם הפוגות להתאוששות והורדת הדופק עד החזרה הבאה. אימון זה מתאים למטרה
                                     הראשונה של שיפור מהירות הריצה. בדרך כלל, באימון הפוגות עצימות פרקי הריצה באימון לא יעלו על 2 דקות
                                     או 600 מטר, שכן מעל הטווחים האלה איננו מסוגלים לשמור על קצב אנאירובי (קצב שבו יש גרעון בצריכת החמצן).
@@ -214,6 +215,7 @@ function IntervalRunningTraining(props) {
                                 
                             </div>
                         }
+                    </section>
                 </>
             }
             
