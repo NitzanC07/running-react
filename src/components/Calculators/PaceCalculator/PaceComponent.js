@@ -120,7 +120,7 @@ function PaceCalculate(props) {
                 }
             </form>
 
-            <h3 className='calculator__subtitle' onClick={handleChangeShowTargetsTable}>טבלת מטרות קצב לאימון</h3>
+            <h3 className='calculator__subtitle' onClick={handleChangeShowTargetsTable}>{changeShowTargetsTable ? "-" : "+"} טבלת מטרות קצב לאימון</h3>
 
             {
                 ((!paceAndSpeed.targets) || (!changeShowTargetsTable)) ? <p></p> :

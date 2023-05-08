@@ -151,7 +151,7 @@ function Vo2maxCooperComponent(props) {
                 </fieldset>
             </form>
 
-            <h3 className='calculator__subtitle' onClick={changeShowResultTable}>שקלול התוצאה</h3>
+            <h3 className='calculator__subtitle' onClick={changeShowResultTable}>{showResultTable ? "-" : "+"} שקלול התוצאה</h3>
             <section className="text__inforamtive-session">
             {
                 showResultTable && 
@@ -222,7 +222,7 @@ function Vo2maxCooperComponent(props) {
             }
             </section>
 
-            <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
+            <h3 className='calculator__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
             <section className="text__inforamtive-session">
             {
                 showTheory && 

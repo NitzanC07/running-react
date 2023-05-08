@@ -107,7 +107,7 @@ function SequentialRunningTraining(props) {
                             התחל אימון רצף
                         </button>
                     </form>
-                    <h3 className='calculator__subtitle' onClick={changeShowTheory}>רקע תאורתי</h3>
+                    <h3 className='calculator__subtitle' onClick={changeShowTheory}>{showTheory ? "" : "+"} רקע תאורתי</h3>
                     <section className="text__inforamtive-session">
                         {
                             showTheory && 
@@ -156,7 +156,7 @@ function SequentialRunningTraining(props) {
                                     <b className='calculator__text_bold'>מקורות:</b>
                                     <ul className='calculator__text_list'>
                                         <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל-אביב. 2019.</li>
-                                        <li className='calculator__text_list-item'>גורדון, ד'. <b className='calculator__text_list-item'>האמנות הנשכחת של הריצה.</b> מגזין אפוק. 15 באוקטובר 2020.</li>
+                                        <li className='calculator__text_list-item'>גורדון, דינה. <b className='calculator__text_list-item'>האמנות הנשכחת של הריצה.</b> מגזין אפוק. 15 באוקטובר 2020.</li>
                                     </ul>
                                 </div>
                                 
