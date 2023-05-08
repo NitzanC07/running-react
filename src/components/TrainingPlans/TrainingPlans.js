@@ -26,6 +26,16 @@ function TrainingPlans(props) {
                         <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">אימון ריצת הפוגות</button>
                     </Link>
                 </li>
+                <li className="main__menu-item">
+                    <Link to={`/${props.id}/running-technique`}>
+                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">אימון טכניקת ריצה</button>
+                    </Link>
+                </li>
+                <li className="main__menu-item">
+                    <Link to={`/${props.id}/stength-training`}>
+                        <button type="button" className="main__menu-button main__menu-button_type_running-timer" id="running-time">אימון כֹּחַ לרצים</button>
+                    </Link>
+                </li>
             </ul>
 
         </section>
