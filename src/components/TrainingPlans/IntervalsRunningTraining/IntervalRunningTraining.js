@@ -165,7 +165,7 @@ function IntervalRunningTraining(props) {
                         </button>
                     </form>
 
-                    <h3 className='calculator__subtitle' onClick={changeShowTheory}>{showTheory ? "" : "+"} רקע תאורתי</h3>
+                    <h3 className='calculator__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
                     <section className='text__inforamtive-session'>
                         {
                             showTheory && 
