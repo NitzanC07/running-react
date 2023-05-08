@@ -1,7 +1,7 @@
 # Sport & Healthy calculators
 
 This is amy personal project that I made as a personal trainer. I made a SPA (Single Page Application) with variety calculators of some fitness field.\
-The direct link to the project: [Nitzan Cohen Running Trainer](https://www.nitzanc.com).
+The direct link to the Single Page Application: [www.nitzanc.com](https://www.nitzanc.com).
 
 ## About the project
 
