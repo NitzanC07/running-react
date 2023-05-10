@@ -56,7 +56,7 @@ function SequentialRunningTraining(props) {
                 /> :
                 <>
                     <SecondaryMenu
-                        page="training-plans"
+                        page="training-plans-and-tools"
                         name="תוכניות וכלי אימון"
                     />
                     <h2 className="training-plans__title">אימון ריצת רצף</h2>

@@ -8,13 +8,13 @@ function MainMenu(props) {
       <p className="main__description">בלה בלה בלה</p>
       <ul className="main__menu-list">
         <li className="main__menu-item">
-          <Link to="/training-plans">
+          <Link to="/training-plans-and-tools">
             <button 
               type="button" 
               className="main__menu-button main__menu-button_type_trainning-plans" 
-              id="training-plans"
+              id="training-plans-and-tools"
             >
-              תוכניות אימון
+              תוכניות אימון וכלי אימון
             </button>
           </Link>
         </li>
@@ -24,18 +24,18 @@ function MainMenu(props) {
               type="button" 
               className="main__menu-button main__menu-button_type_calculators" 
             >
-              מחשבוני כושר
+              מחשבוני כושר ובריאות
             </button>
           </Link>
         </li>
         <li className="main__menu-item">
-          <Link to="/bct">
+          <Link to="/blog">
             <button 
               type="button" 
-              className="main__menu-button main__menu-button_type_bct" 
-              id="bct"
+              className="main__menu-button main__menu-button_type_blog" 
+              id="blog"
             >
-              מבחן תיאום גופני<br/>Body Coordination Test
+              בלוג וכתבות
             </button>
           </Link>
         </li>

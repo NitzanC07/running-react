@@ -67,22 +67,22 @@ function Main(props) {
           />
 
           <Route 
-            path='/training-plans'
-            element={<TrainingPlans id='training-plans' />}
+            path='/training-plans-and-tools'
+            element={<TrainingPlans id='training-plans-and-tools' />}
           />
 
           <Route 
-            path='/training-plans/intervals-running'
+            path='/training-plans-and-tools/intervals-running'
             element={<IntervalRunningTraining />}
           />
 
           <Route 
-            path='/training-plans/sequential-running'
+            path='/training-plans-and-tools/sequential-running'
             element={<SequentialRunningTraining />}
           />
 
           <Route 
-            path='/bct'
+            path='/training-plans-and-tools/bct'
             element={<Bct id="bct" />}
           />
 
