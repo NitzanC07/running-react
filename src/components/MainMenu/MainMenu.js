@@ -5,7 +5,7 @@ function MainMenu(props) {
   return (
     <section className="main__content content_type_main" id="main">
       <h2 className="main__title">עמוד ראשי</h2>
-      <p className="main__description">בלה בלה בלה</p>
+      <p className="main__description">נעים להכיר, אני ניצן...</p>
       <ul className="main__menu-list">
         <li className="main__menu-item">
           <Link to="/training-plans-and-tools">
