@@ -13,6 +13,7 @@ import Bct from '../Bct/Bct';
 import IntervalRunningTraining from '../TrainingPlans/IntervalsRunningTraining/IntervalRunningTraining';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import SequentialRunningTraining from '../TrainingPlans/SequentialRunningTraining/SequentialRunningTraining';
+import PricesList from '../PricesList/PricesList';
 
 function Main(props) {
 
@@ -84,6 +85,11 @@ function Main(props) {
           <Route 
             path='/training-plans-and-tools/bct'
             element={<Bct id="bct" />}
+          />
+
+          <Route 
+            path='/prices-list'
+            element={<PricesList id="prices-list" />}
           />
 
           {/* <Route 
