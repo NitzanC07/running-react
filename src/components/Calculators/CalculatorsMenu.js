@@ -11,9 +11,9 @@ function CalculatorsMenu(props) {
                 name="מחשבוני כושר"
             />
 
-            <h2 className="main__title">מחשבוני כושר ובריאות</h2>
-            <p className="main__description">
-                תיאור על המחשבונים.
+            <h2 className="text__title">מחשבוני כושר ובריאות</h2>
+            <p className="text__description">
+                בעמוד זה ניתן למצוא מחשבונים שונים לחישוב מדדים שונים של הגוף וניתן להיעזר בהם לצורך קביעת מטרות שונות לאימונים, לבצע מבחני כושר ולבדוק איפה אנחנו נמצאים ביחס לממוצע האוכלוסיה וחשוב מכך, ביחס לעצמנו לאורך זמן.
             </p>
             <ul className="main__menu-list">
                 <li className="main__menu-item">

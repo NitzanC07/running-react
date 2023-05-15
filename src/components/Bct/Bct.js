@@ -11,8 +11,8 @@ function Bct(props) {
                 name="תוכניות וכלי אימון"
             />
 
-            <h2 className="main__title">מבחן תיאום גופני (BCT)</h2>
-            <p className="main__description">
+            <h2 className="text__title">מבחן תיאום גופני (BCT)</h2>
+            <p className="text__description">
                 תיאור מבחן תיאום גופני (Body Coordination Test).
             </p>
 

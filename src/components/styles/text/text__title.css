@@ -1,4 +1,4 @@
-.calculator__title {
+.text__title {
     font-family: 'Rubik-bold', Arial, Helvetica, sans-serif;
     font-size: 20px;
     line-height: 22px;
@@ -6,6 +6,6 @@
     padding: 0;
 }
 
-.calculator__title::selection {
+.text__title::selection {
     background-color: #ffa;
 }

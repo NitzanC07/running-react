@@ -1,0 +1,24 @@
+.prices-list__menu-item {
+    width: 280px;
+    margin: 12px 15px;
+    padding: 0;
+    border: 3px solid rgba(100, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.prices-list__menu-item:hover {
+    background-color: rgba(255, 200, 200, 0.8);
+    box-shadow: 10px 10px 10px #aaa;
+    border-color: #ffa;
+}
+
+@media screen and (max-width: 281px) {
+    .prices-list__menu-item {
+        width: 240px;
+    }
+}

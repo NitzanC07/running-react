@@ -36,7 +36,7 @@ function FatPercentageComponent(props) {
                 name="מחשבוני כושר"
             />
 
-            <h2 className='calculator__title'>חישוב אחוז שומן לפי היקפים</h2> 
+            <h2 className='text__title'>חישוב אחוז שומן לפי היקפים</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
                 <fieldset className='calculator__form__data'>
                 <label className="calculator__form__data-label">מין:</label>

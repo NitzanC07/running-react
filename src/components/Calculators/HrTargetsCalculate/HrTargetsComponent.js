@@ -47,7 +47,7 @@ function HrTargetsCalculate(props) {
         name="מחשבוני כושר"
       />
 
-      <h2 className='calculator__title'>חישוב דופק מטרה</h2> 
+      <h2 className='text__title'>חישוב דופק מטרה</h2> 
       <form className='calculator__form' onSubmit={hrTargets}>
         <fieldset className='calculator__form__data'>
           <label className="calculator__form__data-label">מין:</label>

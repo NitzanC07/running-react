@@ -85,7 +85,7 @@ function Vo2maxCooperComponent(props) {
                 name="מחשבוני כושר"
             />
 
-            <h2 className='calculator__title'>חישוב צריכת חמצן מירבית לפי מבחן קופר</h2> 
+            <h2 className='text__title'>חישוב צריכת חמצן מירבית לפי מבחן קופר</h2> 
 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
                 <fieldset className='calculator__form__data'>
@@ -151,12 +151,12 @@ function Vo2maxCooperComponent(props) {
                 </fieldset>
             </form>
 
-            <h3 className='calculator__subtitle' onClick={changeShowResultTable}>{showResultTable ? "-" : "+"} שקלול התוצאה</h3>
+            <h3 className='text__subtitle' onClick={changeShowResultTable}>{showResultTable ? "-" : "+"} שקלול התוצאה</h3>
             <section className="text__inforamtive-session">
             {
                 showResultTable && 
                 <div>
-                    <p className='calculator__text'>{gender === 'male' ? 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הגברים.' : 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הנשים.'}</p>
+                    <p className='text__description'>{gender === 'male' ? 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הגברים.' : 'התפלגות תוצאות צריכת החמצן המירבית עבור אוכלוסיית הנשים.'}</p>
                     <table className='calculator__table'>
                         <tbody>
                         <tr>
@@ -222,19 +222,19 @@ function Vo2maxCooperComponent(props) {
             }
             </section>
 
-            <h3 className='calculator__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
+            <h3 className='text__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
             <section className="text__inforamtive-session">
             {
                 showTheory && 
                 <div>
-                    <p className='calculator__text'>
+                    <p className='text__description'>
                         התהליך האירובי מחייב כמות של כ-3.5 מ"ל חמצן לכל 1 ק"ג גוף לדקה במצב מנוחה. 
                         לדוגמא, עבור אדם השוקל 70 ק"ג, קצב צריכת החמצן שלו למשך דקה אחת צריך להיות כ-245 מ"ל חמצן.
                         יתר על כן, כאשר אנו עוסקים בפעילות גופנית מאומצת מעניינת אותנו צריכת החמצן המירבית (צח"מ) 
                         של הגוף, מכיוון שנתון זה יכול לתת לנו מידע לגבי היכולת האירובית המירבית של האדם. כלומר באיזה
                         שלב הגוף ממצה את הפקת האנרגיה ממקורות אירוביים, ומתחיל להפיק אנרגיה ממקורות אנאירוביים.
                     </p>
-                    <p className='calculator__text'>
+                    <p className='text__description'>
                         בדיקת צריכת חמצת מירבית מתבצעת בדרך כלל במעבדה שבה הנבדק רץ על מסילה בקצב מתגבר עד לנקודה שבה 
                         למרות שקצב הריצה עולה, צריכת החמצן אינה עולה, ואפילו יורדת. כמו כן, בדרך כלל בנקודה זו גם נוכל
                         למצוא את קצב הלב (דופק) המירבי, שכן ישנה התאמה בין צריכת החמצן המירבית לבין הדופק המירבי. 
@@ -242,16 +242,16 @@ function Vo2maxCooperComponent(props) {
                         צריך לרוץ במשך 12 דקות מרחק גדול ככל שניתן. לאחר מכן ניתן לקבל הערכה של צריכת החמצן המירבית
                         לפי חישוב שניתן להשתמש במחשבון שלהלן.
                     </p>
-                    <p className='calculator__text'>
+                    <p className='text__description'>
                         כמו כן, לרוב בדיקה זו תתבצע על ספורטאים מקצוענים או חובבי ספורט מיומנים, ולא נבצע בדיקה זו על
                         מאומנים מתחילים, או אנשים שיש להם בעיות בריאותיות שמגבילות להגיע למאמצים גבוהים. 
                     </p>
-                    <div className='calculator__text'>
-                        <b className='calculator__text_bold'>מקורות:</b>
-                        <ul className='calculator__text_list'>
-                            <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
-                            <li className='calculator__text_list-item'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
-                            <li className='calculator__text_list-item'>Cooper VO<sub className='calculator__text_list-item'>2</sub> max Test, www.brianmac.co.uk</li>
+                    <div className='text__description'>
+                        <b className='text__description'>מקורות:</b>
+                        <ul className='text__description'>
+                            <li className='text__description_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
+                            <li className='text__description_list-item'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
+                            <li className='text__description_list-item'>Cooper VO<sub className='calculator__text_list-item'>2</sub> max Test, www.brianmac.co.uk</li>
                         </ul>
                     </div>
                     

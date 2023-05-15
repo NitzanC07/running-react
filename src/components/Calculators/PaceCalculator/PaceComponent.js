@@ -47,7 +47,7 @@ function PaceCalculate(props) {
                 name="מחשבוני כושר"
             />
 
-            <h2 className='calculator__title'>חישוב קצב ומהירות ריצה</h2> 
+            <h2 className='text__title'>חישוב קצב ומהירות ריצה</h2> 
             <form className='calculator__form' onSubmit={paceCalculate}>
                 
                 <fieldset className='calculator__form__data'>
@@ -120,7 +120,7 @@ function PaceCalculate(props) {
                 }
             </form>
 
-            <h3 className='calculator__subtitle' onClick={handleChangeShowTargetsTable}>{changeShowTargetsTable ? "-" : "+"} טבלת מטרות קצב לאימון</h3>
+            <h3 className='text__subtitle' onClick={handleChangeShowTargetsTable}>{changeShowTargetsTable ? "-" : "+"} טבלת מטרות קצב לאימון</h3>
 
             {
                 ((!paceAndSpeed.targets) || (!changeShowTargetsTable)) ? <p></p> :

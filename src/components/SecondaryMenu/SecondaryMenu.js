@@ -13,12 +13,17 @@ function SecondaryMenu(props) {
 
     return(
         <nav className="secondary-menu__links">
-            <Link to={`/${currentPage}`}>
-                <button className="secondary-menu__button">{name}</button>
-            </Link>
-            <Link to="/">
-                <button className="secondary-menu__button">אודותיי</button>
-            </Link>
+            {
+                currentPage !== "main" &&
+                <>
+                    <Link to={`/${currentPage}`}>
+                        <button className="secondary-menu__button">{name}</button>
+                    </Link>
+                    <Link to="/">
+                        <button className="secondary-menu__button">אודותיי</button>
+                    </Link>
+                </>
+            }
             <a href="https://wa.me/+972503131570" target='_blank' rel='noreferrer'>
                 <button className="secondary-menu__button">צור קשר</button>
             </a>

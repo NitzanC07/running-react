@@ -11,8 +11,8 @@ function TrainingPlans(props) {
                 name="תוכניות וכלי אימון"
             />
 
-            <h2 className="main__title">תוכניות וכלי אימון</h2>
-            <p className="main__description">
+            <h2 className="text__title">תוכניות וכלי אימון</h2>
+            <p className="text__description">
                 תוכניות אימון וכלים טכנולוגיים למהלך האימון ומעקב אחר תוצאות.
             </p>
 

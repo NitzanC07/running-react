@@ -1,0 +1,10 @@
+.prices-list__text {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    padding: 10px 5px;
+    color: rgba(150, 0, 0, 1);
+    background-color: transparent;
+    user-select: none;
+}

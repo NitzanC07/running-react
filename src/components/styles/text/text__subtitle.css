@@ -1,4 +1,4 @@
-.calculator__subtitle {
+.text__subtitle {
     font-family: 'Rubik-bold', Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 20px;
@@ -7,12 +7,12 @@
     cursor: pointer;
 }
 
-.calculator__subtitle::selection {
+.text__subtitle::selection {
     background-color: #ffa;
 }
 
 @media screen and (max-width: 400px) {
-    .calculator__subtitle {
+    .text__subtitle {
         font-size: 16px;
         line-height: 18px;
     }

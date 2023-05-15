@@ -2,6 +2,12 @@
 @import url('./vendor/fonts/fonts.css');
 @import url('./components/App/app.css');
 @import url('./components/App/__container/app__container.css');
+/** Text's styles */
+@import url('./components/styles/text/text__subtitle.css');
+@import url('./components/styles/text/text__title.css');
+@import url('./components/styles/text/text__description.css');
+@import url('./components/styles/text/text__description_bold.css');
+
 @import url('./components/Header/header.css');
 @import url('./components/Header/__logo/header__logo.css');
 @import url('./components/Footer/footer.css');
@@ -13,8 +19,8 @@
 
 @import url('./components/Main/main.css');
 @import url('./components/Main/__content/main__content.css');
-@import url('./components/Main/__title/main__title.css');
-@import url('./components/Main/__description/main__description.css');
+/* @import url('./components/Main/__title/main__title.css'); */
+/* @import url('./components/Main/__description/main__description.css'); */
 @import url('./components/Main/__menu-list/main__menu-list.css');
 @import url('./components/Main/__menu-item/main__menu-item.css');
 @import url('./components/Main/__menu-button/main__menu-button.css');
@@ -22,8 +28,8 @@
 @import url('./components/SecondaryMenu/__links/secondary-menu__links.css');
 @import url('./components/SecondaryMenu/__button/secondary-menu__button.css');
 
-@import url('./components/Calculators/__title/calculator__title.css');
-@import url('./components/Calculators/__subtitle/calculator__subtitle.css');
+/* @import url('./components/Calculators/__title/calculator__title.css'); */
+/* @import url('./components/Calculators/__subtitle/calculator__subtitle.css'); */
 @import url('./components/Calculators/__text/calculator__text.css');
 @import url('./components/Calculators/__text/_bold/calculator__text_bold.css');
 @import url('./components/Calculators/__text/_list/calculator__text_list.css');
@@ -44,3 +50,7 @@
 @import url('./components/TrainingPlans/IntervalsRunningTraining/running-timer.css');
 
 @import url('./components/TrainingPlans/__text/inforamative-session/text__inforamtive-session.css');
+
+@import url('./components/PricesList/prices-list__menu.css');
+@import url('./components/PricesList/prices-list__menu-item.css');
+@import url('./components/PricesList/prices-list__text.css');

@@ -46,7 +46,7 @@ function FatPercentageSkinfoldCalculate(props) {
                 name="מחשבוני כושר"
             />
 
-            <h2 className='calculator__title'>חישוב אחוז שומן לפי קפלי עור</h2> 
+            <h2 className='text__title'>חישוב אחוז שומן לפי קפלי עור</h2> 
             <form className='calculator__form' onSubmit={calculateAndShowData}>
                 <fieldset className='calculator__form__data'>
                 <label className='calculator__form__data-label'>מין:</label>
@@ -108,20 +108,20 @@ function FatPercentageSkinfoldCalculate(props) {
                 </fieldset>
             </form>
 
-            <h3 className='calculator__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
+            <h3 className='text__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
             <section className="text__inforamtive-session">
             {
                 showTheory ? 
                 <div>
-                    <p className='calculator__text'>
+                    <p className='text__description'>
                         מה זה אחוז שומן? למה חשוב להכיר אותו? איך מחשבים אותו?
                     </p>
-                    <p className='calculator__text'>
-                        <b className='calculator__text_bold'>מקורות:</b>
-                        <ul className='calculator__text_list'>
-                            <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
-                            <li className='calculator__text_list-item'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
-                            <li className='calculator__text_list-item'>https://www.calculator.net/body-fat-calculator.html</li>
+                    <p className='text__description'>
+                        <b className='text__description'>מקורות:</b>
+                        <ul className='text__description'>
+                            <li className='text__description'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל אביב. 2019.</li>
+                            <li className='text__description'>ד"ר ענבר, ע' ונייס, ש'. <b className='calculator__text_bold'>הפיזיולוגיה של המאמץ.</b> הוצאת "פוקוס". 2011.</li>
+                            <li className='text__description'>https://www.calculator.net/body-fat-calculator.html</li>
                         </ul>
                     </p>
                 </div>

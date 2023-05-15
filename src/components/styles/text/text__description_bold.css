@@ -1,0 +1,11 @@
+.text__description_bold {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.text__description_bold::selection {
+    background-color: #ffa;
+}

@@ -1,4 +1,4 @@
-.main__description {
+.text__description {
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 18px;
@@ -6,6 +6,6 @@
     padding: 0;
 }
 
-.main__description::selection {
+.text__description::selection {
     background-color: #ffa;
 }

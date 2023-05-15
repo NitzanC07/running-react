@@ -59,7 +59,7 @@ function SequentialRunningTraining(props) {
                         page="training-plans-and-tools"
                         name="תוכניות וכלי אימון"
                     />
-                    <h2 className="training-plans__title">אימון ריצת רצף</h2>
+                    <h2 className="text__title">אימון ריצת רצף</h2>
 
                     <form className='training-plans__form' onSubmit={runningTimerFunc}>
 
@@ -107,20 +107,20 @@ function SequentialRunningTraining(props) {
                             התחל אימון רצף
                         </button>
                     </form>
-                    <h3 className='calculator__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
+                    <h3 className='text__subtitle' onClick={changeShowTheory}>{showTheory ? "-" : "+"} רקע תאורתי</h3>
                     <section className="text__inforamtive-session">
                         {
                             showTheory && 
                             <div>
-                                <p className='calculator__text'>
-                                    <b className='calculator__text'>מה זה אימון רצף?</b><br/>
+                                <p className='text__description'>
+                                    <b className='text__description_bold'>מה זה אימון רצף?</b><br/>
                                     ריצת רצף, ריצת נפח, ריצה אירובית, או ריצת סיבולת, אלה הן כולן הגדרות שמבטאות ריצה ממושכת בזמן ובמרחק.
                                     ראשית נבין למה הכוונה בהגדרות "סיבולת" ו"אירובי". רמת הסיבולת מתבטאת על-ידי היכולת של האדם לרוץ
                                     בקצב נוח מרחק ארוך או זמן ממושך בצורה רציפה, וכן להתאושש בסיום הפעילות בצורה מהירה. המונח "אירובי",
                                     מתייחס לרמה הפיזיולוגית של הפעילות הגופנית, שכן לאורך כל משך הפעילות הגוף משתמש בחמצן על מנת להפיק
                                     את האנרגיה הדרושה לקיום הפעילות (בשונה מפעילות אנאירובית, שבה הגוף מגיע למצב של גרעון בחמצן).
                                 </p>
-                                <p className='calculator__text'>
+                                <p className='text__description'>
                                     לאור זאת, ריצת רצף היא מרכיב בסיסי וחיוני בכל תוכנית אימונים לרצי מרחקים בינוניים וארוכים.
                                     ככלל, אימוני רצף לא מוכרחים להיות דווקא ממוקדים בריצה, שכן, גם הליכה נחשבת כפעילות אירובית. 
                                     מבחינה פיזיולוגית, אפשר לומר שגוף האדם אוהב פעילות אירובית, ואף בנוי באופן מיוחד עבור פעילות
@@ -128,21 +128,21 @@ function SequentialRunningTraining(props) {
                                     בו גם פחמימות (פירוק גליקוגן) וגם שומנים. כמו כן, גם מערכת השרירים מתחזקת ומערכת הלב-ריאה 
                                     מתייעלת ומשתפרת.
                                 </p>
-                                <p className='calculator__text'>
+                                <p className='text__description'>
                                     בתחום של ריצות רצף אנחנו יכולים להתייחס לשלושה סוגים עיקריים של אימונים בהתאם למטרה שלשמה 
                                     אנחנו שואפים להגיע באותו אימון מסוים. סוג אחד הוא אימון רצף נרחב, סוג אחר הוא אימון רצף עצים
                                     (טמפו), והסוג השלישי הוא אימון קצב משתנה (פַרְטְלֵק, Fartlek).
                                 </p>
-                                <p className='calculator__text'>
-                                <b className='calculator__text'>אימון רצף נרחב -</b> הדרך היעילה ביותר לשפר את היכולת האירובית שלנו היא באמצעות
+                                <p className='text__description'>
+                                <b className='text__description_bold'>אימון רצף נרחב -</b> הדרך היעילה ביותר לשפר את היכולת האירובית שלנו היא באמצעות
                                 ריצות ארוכות בקצב מתון (LSDR - Long Slow Distance Runs). אלה ריצות שבהן קצב הלב נע בין 60% ל-70% מהדופק המירבי,
                                 או בדרך יותר תחושתית, אפשר לקרוא לזה "קצב דיבור", כלומר קצב שאין התנשמויות כבדות ושאפשר לדבר תוך כדי הריצה.
                                 לרוב כשנדבר על ריצות למרחקים ארוכים, אנחנו נתייחס למרחקים של 5 ק"מ ועד מרתון (ואפילו מעבר למרתון).
                                 אם המטרה שלנו היא לרוץ מרחק גדול, מסוים אז ישנה חשיבות רבה לשלב בתוכנית האימונים שלנו גם אימוני
                                 רצף נרחב, שנקראים גם אימוני נפח, כאשר בכל אימון כזה אנחנו להגדיל כל פעם את מרחק הריצה.
                                 </p>
-                                <p className='calculator__text'>
-                                <b className='calculator__text'>אימון רצף עצים (טמפו) - </b>אימון זה הוא מהאימונים הקשים יותר עבור כל רץ,
+                                <p className='text__description'>
+                                <b className='text__description_bold'>אימון רצף עצים (טמפו) - </b>אימון זה הוא מהאימונים הקשים יותר עבור כל רץ,
                                 שכן ריצה מסוג זה היא הכי קרובה לריצה בקצב תחרות. למעשה ההבדל היחיד, כמעט, בינה לבין תחרות הוא באי 
                                 נוכחות של משתתפים נוספים בריצה. המטרה של ריצת טמפו היא ללמד את הגוף לשמור על קצב אחיד ומאמץ קבוע
                                 לאורך זמן. קצב הריצה צריך להיות בין 80% ל-90% מהדופק המירבי, ומרחק הריצה ינוע בין קילומטר 1 ל-8
@@ -153,8 +153,8 @@ function SequentialRunningTraining(props) {
                                 הנשימה שמלווה ריצה מהירה. בנוסף, ריצה מסוג זה גם מאפשרת להרגיש יותר בנינוחות בריצות הקצרות
                                 ונותנת חיזוק נוסף לאימוני אינטרוואלים קצרים בעצימות גבוהה להגיע בהם למהירויות יותר גבוהות.
                                 </p>
-                                <p className='calculator__text'>
-                                <b className='calculator__text'>אימון פַרְטְלֵק (Fartlek) -</b> זו היא שיטת אימון רצף משתנה שהומצאה בשוודיה 
+                                <p className='text__description'>
+                                <b className='text__description_bold'>אימון פַרְטְלֵק (Fartlek) -</b> זו היא שיטת אימון רצף משתנה שהומצאה בשוודיה 
                                 על-ידי מאמן בשם גוסטה הולמר בשנות ה-30 של המאה העשרים. המילה פַרְטְלֵק, מקורה בשוודית, והיא הלחם של שתי
                                 מילים Fart = מהירות, ו-Lek = משחק בשוודית, כלומר משחקי מהירות, או משחקי קצב. מטרתה של שיטת אימון זו
                                 היא להרגיל את הגוף לרוץ במהירויות משתנות תוך שמירה על ריצה ממושכת והתאוששות אקטיבית תוך כדי ריצה.
@@ -166,11 +166,11 @@ function SequentialRunningTraining(props) {
                                 ולרוץ בקצב דיבור עד שהדופק והנשימה מתייצבים. המהות של ריצה זו היא ללמד את הרץ להקשיב לגופו ולרוץ
                                 על פי תחושותיו באותו רגע תוך שליטה על מהירות הריצה, ניהול משאבי הגוף ובעיקר הנאה.
                                 </p>
-                                <div className='calculator__text'>
-                                    <b className='calculator__text_bold'>מקורות:</b>
-                                    <ul className='calculator__text_list'>
-                                        <li className='calculator__text_list-item'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל-אביב. 2019.</li>
-                                        <li className='calculator__text_list-item'>גורדון, דינה. <b className='calculator__text_list-item'>האמנות הנשכחת של הריצה.</b> מגזין אפוק. 15 באוקטובר 2020.</li>
+                                <div className='text__description'>
+                                    <b className='text__description_bold'>מקורות:</b>
+                                    <ul className='text__description'>
+                                        <li className='text__description'>קורס מאמני ריצות ארוכות. בית הספר למקצועות הספורט. תל-אביב. 2019.</li>
+                                        <li className='text__description'>גורדון, דינה. <b className='calculator__text_list-item'>האמנות הנשכחת של הריצה.</b> מגזין אפוק. 15 באוקטובר 2020.</li>
                                     </ul>
                                 </div>
                                 
