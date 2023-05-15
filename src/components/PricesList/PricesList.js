@@ -7,10 +7,10 @@ function PricesList(props) {
 
             <SecondaryMenu 
                 page="prices-list"
-                name="מחירון"
+                name="תעריפון"
             />
 
-            <h2 className="text__title">מחירון</h2>
+            <h2 className="text__title">תעריפון</h2>
             <ul className="prices-list__menu">
                 <li className="prices-list__menu-item">
                     <p className="prices-list__text">אימון אישי בודד</p>

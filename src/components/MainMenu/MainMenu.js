@@ -83,7 +83,7 @@ function MainMenu(props) {
               className="main__menu-button main__menu-button_type_prices-list" 
               id="training-plans-and-tools"
             >
-              מחירון
+              תעריפון
             </button>
           </Link>
         </li>
