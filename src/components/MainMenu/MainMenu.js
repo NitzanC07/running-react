@@ -66,17 +66,6 @@ function MainMenu(props) {
 
       <ul className="main__menu-list">
         <li className="main__menu-item">
-          <a href="https://wa.me/+972503131570" target='_blank' rel='noreferrer'>
-            <button 
-              type="button" 
-              className="main__menu-button main__menu-button_type_trainning-plans" 
-              id="contact"
-            >
-              לחץ כאן ושלח הודעה עכשיו כדי לתאם אימון ראשון
-            </button>
-          </a>
-        </li>
-        <li className="main__menu-item">
           <Link to="/prices-list">
             <button 
               type="button" 

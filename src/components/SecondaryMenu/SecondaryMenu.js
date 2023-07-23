@@ -24,7 +24,7 @@ function SecondaryMenu(props) {
                     </Link>
                 </>
             }
-            <a href="https://wa.me/+972503131570" target='_blank' rel='noreferrer'>
+            <a href="https://wa.me/+972503131570?text=שלום%20ניצן,%20אני%20רוצה%20להתחיל%20להתאמן%20איתך%20אשמח%20לדעת%20עלויות%20ולקבוע%20אימון%20ראשון." target='_blank' rel='noreferrer'>
                 <button className="secondary-menu__button">צור קשר</button>
             </a>
         </nav>

@@ -11,6 +11,10 @@
     user-select: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .prices-list__menu-item:hover {
     background-color: rgba(255, 200, 200, 0.8);
     box-shadow: 10px 10px 10px #aaa;
