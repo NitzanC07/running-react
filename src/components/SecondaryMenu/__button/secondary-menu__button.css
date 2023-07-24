@@ -4,14 +4,23 @@
     font-size: 18px;
     line-height: 20px;
     margin: 0 3px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(100, 0, 0, 1);
     border: 0px solid rgba(100, 0, 0, 1);
     border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .secondary-menu__button:hover {
     background-color: rgba(100, 0, 0, 0.7);
     box-shadow: 4px 4px 4px #aaa;
+}
+
+.whatsappIcon {
+    width: 20px;
+    margin: 0px 10px 0 0;
 }

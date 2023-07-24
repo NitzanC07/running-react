@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import whatsappIcon from '../../images/logos/whatsapp-icon-white.svg';
 
 function SecondaryMenu(props) {
 
@@ -25,7 +26,10 @@ function SecondaryMenu(props) {
                 </>
             }
             <a href="https://wa.me/+972503131570?text=שלום%20ניצן,%20אני%20רוצה%20להתחיל%20להתאמן%20איתך%20אשמח%20לדעת%20עלויות%20ולקבוע%20אימון%20ראשון." target='_blank' rel='noreferrer'>
-                <button className="secondary-menu__button">צור קשר</button>
+                <button className="secondary-menu__button">
+                    צור קשר
+                    <img className='whatsappIcon' src={whatsappIcon} alt='Contact with Whatsapp application.' />
+                </button>
             </a>
         </nav>
     )
