@@ -107,7 +107,7 @@ function IntervalRunningTraining(props) {
                                 className='training-plans__form__input training-plans__form__input_time' 
                                 type="number" 
                                 id="seconds-run" 
-                                placeholder='0'
+                                placeholder='שניות'
                                 value={secondsRun <= 0 ? '' : secondsRun > 59 ? secondsRun % 60 : secondsRun}
                                 onChange={(e) => setSecondsRun(e.target.value)}
                                 />:
@@ -115,7 +115,7 @@ function IntervalRunningTraining(props) {
                                 className='training-plans__form__input training-plans__form__input_time' 
                                 type="number" 
                                 id="minutes-run" 
-                                placeholder={0} 
+                                placeholder='דקות' 
                                 value={minutesRun <= 0 ? '' : minutesRun}
                                 onChange={(e) => setMinutesRun(e.target.value)}
                                 />
@@ -129,7 +129,7 @@ function IntervalRunningTraining(props) {
                                     className='training-plans__form__input training-plans__form__input_time' 
                                     type="number" 
                                     id="secondsRest" 
-                                    placeholder='0'
+                                    placeholder='שניות'
                                     value={secondsRest <= 0 ? '' : secondsRest > 59 ? secondsRest % 60 : secondsRest}
                                     onChange={(e) => setSecondsRest(e.target.value)}
                                 />:
@@ -137,7 +137,7 @@ function IntervalRunningTraining(props) {
                                     className='training-plans__form__input training-plans__form__input_time' 
                                     type="number" 
                                     id="minutes-rest" 
-                                    placeholder='0' 
+                                    placeholder='דקות' 
                                     value={minutesRest <= 0 ? '' : minutesRest}
                                     onChange={(e) => setMinutesRest(e.target.value)}
                                 />
@@ -150,7 +150,7 @@ function IntervalRunningTraining(props) {
                             className='calculator__form__input' 
                             type="number" 
                             id="repeatitions" 
-                            placeholder='0' 
+                            placeholder='כמה חזרות?' 
                             value={repeatitions > 0 ? repeatitions : ''}
                             onChange={(e) => setRepeatitions(e.target.value)}
                             />

@@ -24,6 +24,12 @@
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 1.5em;
 }
+
+.running-timer__text2 {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-size: 1.0em;
+}
+
 .running-timer__text::selection {
     background-color: #ffa;
 }
@@ -46,9 +52,9 @@
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 1em;
     width: 80px;
-    background-color: rgba(100, 0, 0, 1);
+    background-color: #640000;
     color: #ffa;
-    border: 3px solid rgba(100, 0, 0, 1);
+    border: 3px solid #640000;
     border-radius: 10px;
     position: absolute;
         top: 5px;

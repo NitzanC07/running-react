@@ -84,7 +84,7 @@ function SequentialRunningTraining(props) {
                                 className='training-plans__form__input training-plans__form__input_time' 
                                 type="number" 
                                 id="seconds-run" 
-                                placeholder='0'
+                                placeholder='שניות'
                                 value={secondsRun <= 0 ? '' : secondsRun > 59 ? secondsRun % 60 : secondsRun}
                                 onChange={(e) => setSecondsRun(e.target.value)}
                                 />:
@@ -92,7 +92,7 @@ function SequentialRunningTraining(props) {
                                 className='training-plans__form__input training-plans__form__input_time' 
                                 type="number" 
                                 id="minutes-run" 
-                                placeholder={0} 
+                                placeholder='דקות' 
                                 value={minutesRun <= 0 ? '' : minutesRun}
                                 onChange={(e) => setMinutesRun(e.target.value)}
                                 />

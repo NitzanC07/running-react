@@ -3,6 +3,15 @@ import { useState, useEffect } from "react";
 function RunningTimer(props) {
     // console.log(props);
 
+    const [currentDate, setCurrentDate] = useState('');
+    const [currentTime, setCurrentTime] = useState('');
+    
+    useEffect(() => {
+        const date = new Date();
+        setCurrentDate(`${date.getDate()}.${date.getMonth()+1}.${date.getFullYear()}`)
+        setCurrentTime(`${date.getHours()}:${date.getMinutes()}`)        
+    }, []);
+
     const [intervalTime, setIntervalTime] = useState(props.data.intervalTime);
     // const [restTime, setRestTime] = useState(props.data.restTime);
     const [repeatitions, setRepeatitions] = useState(props.data.repeatitions);
@@ -33,14 +42,14 @@ function RunningTimer(props) {
     }, [intervalTime, intervalTimerActive, repeatitions, props.data.restTime, props.data.intervalTime, props])
 
     return (
-        <section className="running-timer" style={intervalTimerActive ? {'backgroundColor': '#2f2'} : {'backgroundColor': '#ff8'}}>
+        <section className="running-timer" style={intervalTimerActive ? {'backgroundColor': '#640000c0'} : {'backgroundColor': '#ffff88a0'}}>
             {repeatitions > 0 ? 
             <>
                 {
                     intervalTimerActive ?
                     <>
-                        <p className="running-timer__title">ריצה</p>
-                        <p className="running-timer__time">{`${Math.floor(intervalTime/60)}`.padStart(2, '0')}:{`${intervalTime%60}`.padStart(2, 0)}</p> 
+                        <p className="running-timer__title" style={intervalTimerActive && {'color': '#ffa'}}>ריצה</p>
+                        <p className="running-timer__time" style={intervalTimerActive && {'color': '#ffa'}}>{`${Math.floor(intervalTime/60)}`.padStart(2, '0')}:{`${intervalTime%60}`.padStart(2, 0)}</p> 
                     </> :
                     <>
                         <p className="running-timer__title">התאוששות</p>
@@ -48,7 +57,7 @@ function RunningTimer(props) {
                     </>
                     }
             
-                <p className="running-timer__title">
+                <p className="running-timer__title" style={intervalTimerActive ? {'color': '#ffa'} : {'color': '#640000'}}>
                     {repeatitions === 1 ? `חזרה אחרונה!` : `נשארו עוד ${repeatitions} חזרות.`}
                 </p>
             </> : 
@@ -62,6 +71,8 @@ function RunningTimer(props) {
                     <p className="running-timer__text">
                         בסך-הכל רצת {Math.floor(((props.data.intervalTime+props.data.restTime)*props.data.repeatitions)/60)}:{((props.data.intervalTime+props.data.restTime)*props.data.repeatitions)%60} דקות.
                     </p>
+                    <p className="running-timer__text2">תאריך: {currentDate}</p>
+                    <p className="running-timer__text2">שעת התחלת האימון: {currentTime}</p>
                 </div>
             </>
             }

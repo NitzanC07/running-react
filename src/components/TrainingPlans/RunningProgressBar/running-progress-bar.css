@@ -2,7 +2,7 @@
     width: 90%;
     height: 20%;
     /* background-color: rgba(255, 255, 255, 0.4); */
-    border: 7px solid rgba(100, 0, 0, 1);
+    border: 7px solid #ffa;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
 
 .progress {
     height: 100%;
-    background-color: rgba(100, 0, 0, 0.5);
+    background-color: rgba(255, 170, 0, 0.6);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     line-height: 1.1;
-    color: rgba(100, 0, 0, 1);
+    color: #fff;
     letter-spacing: 0.12em;
     word-spacing: 0.16em;
     margin: 0;
